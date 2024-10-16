@@ -16,7 +16,7 @@
                 <img src="images/logo.png" width="125px">
             </div>
             <nav>
-                <ul>
+                <ul id="MenuItems">
                     <li><a href="">Home</a></li>
                     <li><a href="">Products</a></li>
                     <li><a href="">About</a></li>
@@ -25,6 +25,7 @@
                 </ul>
             </nav>
             <img src="images/cart.png" width="30px" height="30px">
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
         </div>
         <div class="row">
             <div class="col-2">
@@ -110,11 +111,13 @@
             <p>$30.00</p>
         </div>
     </div>
+
+    <!------Latest Products--------->
     <h2 class="title">Latest Products</h2>
     <div class="row">
         <div class="col-4">
             <img src="images/product-5.jpg">
-            <h4>Red Printed T-Shirt</h4>
+            <h4>High-top Sneakers</h4>
             <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -122,11 +125,11 @@
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star-o"></i>
             </div>
-            <p>$50.00</p>
+            <p>$350.00</p>
         </div>
         <div class="col-4">
             <img src="images/product-6.jpg">
-            <h4>HRX Shoes</h4>
+            <h4>Puma T-Shirt Black</h4>
             <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -134,36 +137,36 @@
                 <i class="fa fa-star-half-o"></i>
                 <i class="fa fa-star-o"></i>
             </div>
-            <p>$70.00</p>
+            <p>$170.00</p>
         </div>
         <div class="col-4">
             <img src="images/product-7.jpg">
-            <h4>Joggers</h4>
+            <h4>Socks-Pair of 3</h4>
             <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
                 <i class="fa fa-star-half-o"></i>
+                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star-o"></i>
             </div>
-            <p>$40.00</p>
+            <p>$20.00</p>
         </div>
         <div class="col-4">
             <img src="images/product-8.jpg">
-            <h4>Blue T-Shirt</h4>
+            <h4>Watch-Fossil</h4>
             <div class="rating">
+                <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star-half-o"></i>
                 <i class="fa fa-star-o"></i>
-                <i class="fa fa-star-o"></i>
             </div>
-            <p>$30.00</p>
+            <p>$60.00</p>
         </div>
         <div class="row">
             <div class="col-4">
                 <img src="images/product-9.jpg">
-                <h4>Red Printed T-Shirt</h4>
+                <h4>Roadster Watch</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -171,23 +174,23 @@
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star-o"></i>
                 </div>
-                <p>$50.00</p>
+                <p>$350.00</p>
             </div>
             <div class="col-4">
                 <img src="images/product-10.jpg">
-                <h4>HRX Shoes</h4>
+                <h4>Premium Shoes</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
-                    <i class="fa fa-star-half-o"></i>
-                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
                 </div>
-                <p>$70.00</p>
+                <p>$700.00</p>
             </div>
             <div class="col-4">
                 <img src="images/product-11.jpg">
-                <h4>Joggers</h4>
+                <h4>Comfort Shoes</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -195,11 +198,11 @@
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star-half-o"></i>
                 </div>
-                <p>$40.00</p>
+                <p>$120.00</p>
             </div>
             <div class="col-4">
                 <img src="images/product-12.jpg">
-                <h4>Blue T-Shirt</h4>
+                <h4>Loafer Joggers</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -207,7 +210,7 @@
                     <i class="fa fa-star-o"></i>
                     <i class="fa fa-star-o"></i>
                 </div>
-                <p>$30.00</p>
+                <p>$80.00</p>
             </div>
         </div>
     </div>
@@ -236,19 +239,64 @@
     <div class="small-container">
         <div class="row">
             <div class="col-3">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever
+                <i class="fa fa-quote-left"></i>
+                <p>The prices are unbeatable, and I’ve saved a lot shopping here. However, shipping takes longer than expected at times. If they can speed that up, it’d be perfect!
                 </p>
                 <div class="rating">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <img src="images/user-1.png">
+                <h3>Sean Parker</h3>
+            </div>
+            <div class="col-3">
+                <i class="fa fa-quote-left"></i>
+                <p>This site has a huge selection of products! I was able to find both everyday items and rare products that aren’t available anywhere else. Definitely my go-to for online shopping.
+                </p>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <img src="images/user-2.png">
+                <h3>Robert j.</h3>
+            </div>
+            <div class="col-3">
+                <i class="fa fa-quote-left"></i>
+                <p>I placed an order over two weeks ago, and it still hasn’t arrived. The tracking system is useless, and I’m not even sure if it’s coming. Definitely not ordering here again.
+                </p>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
                     <i class="fa fa-star-half-o"></i>
                     <i class="fa fa-star-o"></i>
                     <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
                 </div>
-
+                <img src="images/user-3.png">
+                <h3>Mabel Jr.</h3>
             </div>
         </div>
     </div>
 </div>
+
+<!--------js for toggle menu-------->
+
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+    MenuItems.style.maxHeight = "0px";
+    function menutoggle(){
+        if(MenuItems.style.maxHeight == "0px") {
+            MenuItems.style.maxHeight = "200px";
+        }
+        else{
+            MenuItems.style.maxHeight = "0px";
+        }
+    }
+</script>
 </body>
 </html>
