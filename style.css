@@ -105,8 +105,8 @@
 }
  .main{
     border: 1px solid rgba(110, 106, 106, 0.838);
-    height: 90vh;
-    width: 100vw;
+    height: auto;
+    width: auto;
  }
  .list ul{
     display: flex;
@@ -142,7 +142,91 @@
         font-size: 0.9em;   
     }
 }
-
  /* :hover {
    color: red;
  } */
+.another-container{
+    width: 82vw;
+    height: 50vh;
+    justify-content: center;
+    border: 1px solid black;
+    background-color: rgb(255, 242, 104);
+    margin-left: 14vh;
+    margin-top: 4vh;
+    border-radius: 35px;
+    padding: 2% 0 0 3%;
+    display: flex;
+    gap: 2vh;
+}
+@media screen and (max-width:768px) {
+  .another-container{
+    margin-left:9vw;
+    font-size: 0.5em;
+   flex-direction: column;
+  }
+  .text{
+    margin-top: 0vh;
+  }
+  .images{
+    height: 30vh;
+  }
+}
+.text{
+ color: rgb(31, 64, 93);
+  z-index: 10;
+ font-size: 1.3em;
+ cursor: pointer;
+}
+.text #b1{
+  width: 7vw;
+  height: 5vh;
+  border-radius: 40px;
+  background-color: transparent;
+  font-size: 1em;
+  color: rgb(34, 69, 81);
+ font-weight: 500;
+ margin-top: 3vh;
+}
+.text:hover{
+  text-decoration: underline;
+}
+#b1:hover{
+ background-color: rgb(207, 186, 186);
+ }
+ .text3{
+  font-size: 2em;
+  font-weight: 400;
+ margin: 5vh 0 0 10vw;
+ padding-bottom: 4vh;
+ }
+ .products{
+  margin-bottom: 8vh;
+ }
+ .products ul{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left:10vw;
+  gap: 8vh;
+ }
+ .products ul li:hover{
+  text-decoration: underline;
+  text-decoration-color: rgb(106, 134, 157);
+  text-decoration-thickness: 3px;
+  cursor: pointer;
+ }
+ .p img{
+ border-radius: 295px;
+ height: 20vh;
+ }
+ .p{
+   list-style: none;
+   display: flex;
+   flex-direction: column;
+   gap: 1vw;
+   font-size: 1.2em;
+ }
+ .finalcontainer{
+    height: 50vh;
+    background-color: rgba(177, 172, 172, 0.976);
+ }
+ 
