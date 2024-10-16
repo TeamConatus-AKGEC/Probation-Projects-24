@@ -103,7 +103,7 @@ p{
 
 /*home page*/
 #slogan{
-    background-image: url(/projects/e-commerce/pics/hero4.png);
+    background-image: url(/Probation-Projects-24/Lavi_sharma/e-commerce/pics/hero4.png);
     height: 90vh;
     width: 100%;
     background-size: cover;
@@ -122,7 +122,7 @@ p{
     color: #088178;
 }
 #slogan button{
-    background-image: url(/projects/e-commerce/pics/button.png);
+    background-image: url(/Probation-Projects-24/Lavi_sharma/e-commerce/pics/button.png);
     background-color: transparent;
     color: #088178;
     border: 0;
