@@ -1,0 +1,148 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.head{
+    border: 1px solid rgba(110, 106, 106, 0.838);
+    height: 3vh;
+    display: flex;
+    justify-content: center;
+    gap: 45vw;
+    text-align: center;
+    padding-top: 15px;
+    /* position: absolute; */
+}
+.s1{
+    display: flex;
+    gap: 30px;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .head {
+        flex-direction: column; 
+        gap: 10px; 
+        overflow-y:scroll;
+    }
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(110, 106, 106, 0.838);
+    height: 11vh;
+    padding: 10px;
+    position: relative;
+  }
+  
+  .container img {
+    max-width: 100px;
+    height: auto;
+    margin-left: 10px;
+  }
+  
+  .search-box {
+    width: 66vw;
+    height: 7vh;
+    border: 2.2px solid rgba(16, 16, 16, 0.838);
+    border-radius: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 15px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .search-box img {
+    cursor: pointer;
+    height: 30px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .container img {
+      margin: 10px 0;
+    }
+  
+    .search-box {
+      width: 80vw;
+      height: 6vh;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .container {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .container img {
+      margin-left: 0;
+      max-width: 80px; /* Smaller logo for mobile */
+    }
+  
+    .search-box {
+      width: 90vw;
+      height: 6vh;
+    }
+  
+    .search-box img {
+      height: 25px;
+    }
+  }
+ @media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+}
+ .main{
+    border: 1px solid rgba(110, 106, 106, 0.838);
+    height: 90vh;
+    width: 100vw;
+ }
+ .list ul{
+    display: flex;
+    gap: 3vh;   
+    list-style: none; 
+    padding: 2vh 0 0 13vw;
+    font-size: 1.2em;
+    font-weight: lighter;
+    position: relative;
+ }
+ @media screen and (max-width: 1170px){
+    .list ul{
+        font-size:1.2em;
+        overflow-x: auto;
+    }
+ }
+ @media screen and (max-width: 768px) {
+    .list ul {
+        flex-direction: column;
+        gap: 2vh;             
+        padding-left: 5vw;    
+        font-size: 1em;      
+    }
+}
+@media screen and (max-width: 480px) {
+    .main {
+        height: auto;        
+    }
+
+    .list ul {
+        padding-left: 3vw;   
+        gap: 1.5vh;           
+        font-size: 0.9em;   
+    }
+}
+
+ /* :hover {
+   color: red;
+ } */
