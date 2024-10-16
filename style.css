@@ -85,7 +85,7 @@
   
     .container img {
       margin-left: 0;
-      max-width: 80px; /* Smaller logo for mobile */
+      max-width: 80px; 
     }
   
     .search-box {
