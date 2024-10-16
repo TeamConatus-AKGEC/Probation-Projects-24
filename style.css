@@ -40,7 +40,7 @@ p{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
 }
 .col-2{
     flex-basis: 50%;
@@ -140,7 +140,7 @@ h4{
 /* -------offer------- */
 .offer{
     background: radial-gradient(#fff,#ffd6d6);
-    margin: 80px;
+    margin: 30px;
     padding: 30px 0 ;
 }
 .col-2 .offer-img{
@@ -190,34 +190,6 @@ small{
     display: none;
 }
 
-/* -------media query for menu--------- */
-@media only screen and (max-width: 750px)
-{
-   
-    nav ul{
-        position: absolute;
-        top: 70px;
-        left: 0;
-        background: #333;
-        width: 100%;
-    }
-    nav ul li{
-        display: block;
-        margin-right: 50px ;
-        margin-bottom: 10px;
-        margin-top: 10px;
-    }
-    nav ul li a{
-        color: #fff;
-    }
-    .menu-icon{
-        display: block;
-        cursor: pointer;
-    }
-
-
-} 
-
 
 /* -------footer-------- */
 
@@ -262,4 +234,43 @@ ul{
 }
 .app-logo img{
     width: 140px;
+}
+
+
+/* -------media query for menu--------- */
+@media only screen and (max-width: 750px)
+{
+   
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #333;
+        width: 100%;
+    }
+    nav ul li{
+        display: block;
+        margin-right: 50px ;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    nav ul li a{
+        color: #fff;
+    }
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+} 
+
+
+/* ------media query for less than 600 screen size----- */
+@media only screen and (max-width: 600px){
+    .row{
+        text-align: center;
+    }
+    .col-2, .col-3, .col-4{
+        flex-basis: 100%;
+    }
+    
 }
