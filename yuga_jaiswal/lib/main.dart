@@ -1,6 +1,7 @@
 import 'package:ecommerce_app/navbar.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce_app/scrollproduct.dart';
+import 'package:ecommerce_app/searchbar.dart';
 // import 'package:ecommerce_app/cart.dart';
 // import 'package:ecommerce_app/profile.dart';
 void main() {
@@ -24,41 +25,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar:   AppBar(
-          centerTitle: true,
-          backgroundColor: Colors.white ,
-          title: TextFormField(
-              
-              decoration: InputDecoration(
-                  hintText: 'Search products',
-                  prefixIcon: Icon(Icons.search),
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(40),
-                      borderSide: BorderSide.none,
-                  ),
-                  fillColor: Colors.grey[200],
-                  filled: true,
-               ),
-            onSaved: (String? value) {
-            }
-          ),
-          actions: [
-            Ink(
-              padding: EdgeInsets.fromLTRB(0.0,0.0,10.0,0.0), 
-              decoration: ShapeDecoration(
-            
-            color: Colors.grey[200],
-            shape: CircleBorder(),
-          ),
-          child: IconButton(
-            icon: Icon(Icons.notifications_outlined),
-            color: Colors.grey,
-            iconSize: 40.0,
-            onPressed: () {},
-          ),
-        ),
-        ],
-      ),
+        appBar: Searchbar(), 
       backgroundColor: Colors.white,
       body: buildscroll(),
       bottomNavigationBar: Navbar()
@@ -154,6 +121,66 @@ Widget buildscroll()=>
                 ),
               ),
             ),
+            // Container(
+            //   padding: const EdgeInsets.fromLTRB(10.0,0.0,10.0,10.0),
+            //   child: ListView(
+            //     scrollDirection: Axis.horizontal,
+            //     children: [
+            //         OutlinedButton(
+            //           onPressed: (){}, 
+            //           child: Text('Fashion'),
+            //           style: OutlinedButton.styleFrom(
+            //             padding: EdgeInsets.symmetric(horizontal: 16),
+            //             foregroundColor: Colors.black87,
+            //             minimumSize: Size(88, 36),
+            //             shape: const RoundedRectangleBorder(
+            //               borderRadius: BorderRadius.all(Radius.circular(15)),
+            //             )
+            //           ),
+            //         ),
+            //         Padding(padding: EdgeInsets.only(right:12.0)),
+            //         OutlinedButton(
+            //           onPressed: (){}, 
+            //           child: Text('Home'),
+            //           style: OutlinedButton.styleFrom(
+            //             padding: EdgeInsets.symmetric(horizontal: 16),
+            //             foregroundColor: Colors.black87,
+            //             minimumSize: Size(88, 36),
+            //             shape: const RoundedRectangleBorder(
+            //               borderRadius: BorderRadius.all(Radius.circular(15)),
+            //             )
+            //           ),
+            //         ),
+            //         Padding(padding: EdgeInsets.only(right:12.0)),
+            //         OutlinedButton(
+            //           onPressed: (){}, 
+            //           child: Text('Mobiles'),
+            //           style: OutlinedButton.styleFrom(
+            //             padding: EdgeInsets.symmetric(horizontal: 16),
+            //             foregroundColor: Colors.black87,
+            //             minimumSize: Size(88, 36),
+            //             shape: const RoundedRectangleBorder(
+            //               borderRadius: BorderRadius.all(Radius.circular(15)),
+            //             )
+            //           ),
+            //         ),
+            //         Padding(padding: EdgeInsets.only(right:12.0)),
+            //         OutlinedButton(
+            //           onPressed: (){}, 
+            //           child: Text('Electronics'),
+            //           style: OutlinedButton.styleFrom(
+            //             padding: EdgeInsets.symmetric(horizontal: 16),
+            //             foregroundColor: Colors.black87,
+            //             minimumSize: Size(88, 36),
+            //             shape: const RoundedRectangleBorder(
+            //               borderRadius: BorderRadius.all(Radius.circular(15)),
+            //             )
+            //           ),
+            //         ),
+                    
+            //       ],
+            //   ),
+            // ),
 
             //Hot Sales Text
             Container(

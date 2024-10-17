@@ -4,10 +4,6 @@ import 'package:ecommerce_app/profile.dart';
 import 'package:ecommerce_app/main.dart';
 
 class Navbar extends StatelessWidget {
-  //final String bar;
-  
-  // Navbar({required this.bar})
-
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
