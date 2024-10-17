@@ -125,3 +125,33 @@ button {
 .Item-tag {
     font-size: 16px;
 }
+
+.Sales {
+    padding: 20px;
+}
+
+.Sales-table {
+    width: 100%;
+    margin: auto;
+    border: 1px solid grey;
+    border-collapse: collapse;
+}
+
+.Sales-table-head {
+    background-color: #806BDC;
+}
+
+.Sales-table td {
+    text-align: center;
+}
+
+.Information {
+    margin-left: 20px;
+}
+
+footer {
+    padding: 10px 0;
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+}
