@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/navbar.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -24,7 +25,7 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
+      bottomNavigationBar: Navbar(),
     );
   }
 }

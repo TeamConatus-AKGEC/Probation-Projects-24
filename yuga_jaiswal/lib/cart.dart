@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/navbar.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,6 +10,22 @@ class cart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+
+      title: "Cart",
+      debugShowCheckedModeBanner: false,
+      home: CartPage(),
+    );
+  }
+}
+
+class CartPage extends StatelessWidget {
+  const CartPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      bottomNavigationBar: Navbar(),
+    );
   }
 }
