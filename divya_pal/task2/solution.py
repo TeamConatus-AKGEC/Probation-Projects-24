@@ -4,3 +4,10 @@ import numpy as np
 
 a1 = np.arange(1,11)
 print(a1 + 5)
+
+#3x3 identity matrix using numpy
+
+print(np.identity(3))
+
+
+
