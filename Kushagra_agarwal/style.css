@@ -111,6 +111,11 @@ body{
     border-radius: 0.5rem;
     color: aliceblue;
     padding: 5px;
+    cursor: pointer;
 
+}
+#button-container{
+    display: flex;
+    gap: 10px;
 }
 
