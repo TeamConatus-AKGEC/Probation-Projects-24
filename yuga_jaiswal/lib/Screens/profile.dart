@@ -1,5 +1,5 @@
+import 'package:ecommerce_app/Components/navbar.dart';
 import 'package:flutter/material.dart';
-import 'package:ecommerce_app/navbar.dart';
 
 void main() {
   runApp(profile());
@@ -12,15 +12,15 @@ class profile extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
 
-      title: "Fashion",
+      title: "Profile",
       debugShowCheckedModeBanner: false,
-      home: FashionPage(),
+      home: ProfilePage(),
     );
   }
 }
 
-class FashionPage extends StatelessWidget {
-  const FashionPage({super.key});
+class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
 
   @override
   Widget build(BuildContext context) {

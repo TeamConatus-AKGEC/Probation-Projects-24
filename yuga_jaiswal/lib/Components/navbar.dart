@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ecommerce_app/cart.dart';
-import 'package:ecommerce_app/profile.dart';
+import 'package:ecommerce_app/Screens/cart.dart';
+import 'package:ecommerce_app/Screens/profile.dart';
 import 'package:ecommerce_app/main.dart';
 
 class Navbar extends StatelessWidget {

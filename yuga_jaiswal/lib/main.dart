@@ -1,9 +1,22 @@
-import 'package:ecommerce_app/navbar.dart';
+import 'package:ecommerce_app/Screens/fashion.dart';
+import 'package:ecommerce_app/Components/navbar.dart';
 import 'package:flutter/material.dart';
-import 'package:ecommerce_app/scrollproduct.dart';
-import 'package:ecommerce_app/searchbar.dart';
+import 'package:ecommerce_app/Components/scrollproduct.dart';
+import 'package:ecommerce_app/Components/searchbar.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 // import 'package:ecommerce_app/cart.dart';
 // import 'package:ecommerce_app/profile.dart';
+
+final List<String> imgList = [
+  'assets/images/sale.jpg',
+  'assets/images/sale6.jpg',
+  'assets/images/sale5.jpg',
+  'assets/images/sale1.jpg',
+  'assets/images/sale2.jpg',
+  'assets/images/sale3.jpg',
+  'assets/images/sale4.jpg',
+];
+
 void main() {
   runApp(FlutterApp());
 } 
@@ -25,17 +38,10 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: Searchbar(), 
+      appBar: Searchbar(), 
       backgroundColor: Colors.white,
-      body: buildscroll(),
-      bottomNavigationBar: Navbar()
-      
-    );
-  }
-}
-
-Widget buildscroll()=>
-      SingleChildScrollView(
+      bottomNavigationBar: Navbar(),
+      body: SingleChildScrollView(
 
         child: Column(
           
@@ -43,20 +49,32 @@ Widget buildscroll()=>
           children: [
               //Sales Images
               Container(
-                padding: EdgeInsets.all(10.0),
-                child: Container(
-                  width: double.infinity,
-                  height: 180,
-                  decoration: BoxDecoration(
-                    //border: Border.all(),
-                    borderRadius:  BorderRadius.circular(30.0),
-                    image: DecorationImage(
-                      image: AssetImage('assets/images/sale.jpg'),
-                      fit: BoxFit.cover
-                    )
+                child: CarouselSlider(
+                  options: CarouselOptions(
+                    viewportFraction: 1.0,
+                    enlargeCenterPage: true
                   ),
+                  items: imgList
+                  .map((item) => Container(
+                    padding: EdgeInsets.fromLTRB(5.0,10.0,5.0,10.0),
+                    child: Container(
+                      width: double.infinity,
+                      height: 180,
+                      decoration: BoxDecoration(
+                         borderRadius:  BorderRadius.circular(0.0),
+                         image: DecorationImage(
+                            image: AssetImage(item),
+                            fit: BoxFit.fitWidth
+                         )
+                      ),
+                         // Image.asset(item, fit: BoxFit.cover)),
+                    ),
+                    )
                 )
-                ),
+                  .toList(),
+                )
+              ),
+              
               //Quick Categories Section
               Container(
               padding: const EdgeInsets.fromLTRB(10.0,0.0,10.0,10.0),
@@ -66,7 +84,11 @@ Widget buildscroll()=>
                 child: Row(
                   children: [
                     OutlinedButton(
-                      onPressed: (){}, 
+                      onPressed: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (BuildContext context) => fashion())); 
+                      }, 
                       child: Text('Fashion'),
                       style: OutlinedButton.styleFrom(
                         padding: EdgeInsets.symmetric(horizontal: 16),
@@ -272,6 +294,9 @@ Widget buildscroll()=>
                 
           ]
         ),
-      );
-
+      )
+,
+    );
+  }
+}
     
