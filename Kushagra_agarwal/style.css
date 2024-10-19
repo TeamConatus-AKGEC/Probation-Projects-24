@@ -92,4 +92,25 @@ body{
 }
 .task-list{
     list-style: none;
+    /* padding: 10px; */
+
 }
+.task-list li{
+    margin: 10px;
+    border: #3a506b 2px solid;
+    padding: 10px;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-list li button{
+    background-color:#2b2d42;
+    border: #3a506b 2px solid;
+    border-radius: 0.5rem;
+    color: aliceblue;
+    padding: 5px;
+
+}
+
