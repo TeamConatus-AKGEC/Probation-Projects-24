@@ -1,0 +1,92 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:#2b2d42;
+    color: #edf2f4;
+    /* border: #3a506b 2px solid; */
+}
+#parent-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    gap: 2rem;
+
+}
+#track-todo{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    gap: 10px   ;
+}
+#track-todo, #todolist{
+    border: #3a506b 2px solid;
+    width: 30vw;
+    border-radius: 0.5rem;
+    height: auto;
+    
+}
+#details{
+    width: 100%;
+}
+#progress-bar{
+    width: 100%;
+    height: 10px;
+    background-color: aquamarine;
+    
+    border-radius: 5px;
+    margin-top: 15px;
+}
+#progress{
+    width: 50%;
+    height: 10px;
+    background-color: aqua;
+    border-radius: 10px;
+
+}
+#numbers{
+    background-color: rgb(98, 128, 173);
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+#heading{
+    font-size: 2rem;
+    text-align: left;
+    /* padding-left: 0.2rem; */
+}
+/* #subheading{
+    padding-left: 0.3rem;
+} */
+#taskbar-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+#add-button button{
+    background-color: rgb(98, 128, 173);
+    border-radius: 50%;
+    border-style: none;
+    width: 40px;
+    height: 40px;
+}
+#add-task input{
+    background-color:#2b2d42;
+    border: #3a506b 2px solid;
+    border-radius: 0.5rem;
+    height: 40px;
+    color: aliceblue;
+    padding: 5px;
+
+
+}
