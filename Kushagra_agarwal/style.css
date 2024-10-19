@@ -90,3 +90,6 @@ body{
 
 
 }
+.task-list{
+    list-style: none;
+}
