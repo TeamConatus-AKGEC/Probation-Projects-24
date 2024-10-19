@@ -61,8 +61,8 @@ class HomeScreen extends StatelessWidget {
                       width: double.infinity,
                       height: 180,
                       decoration: BoxDecoration(
-                         borderRadius:  BorderRadius.circular(0.0),
                          image: DecorationImage(
+                            
                             image: AssetImage(item),
                             fit: BoxFit.fitWidth
                          )
