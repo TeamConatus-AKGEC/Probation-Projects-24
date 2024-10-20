@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color:#2b2d42;
+    background-color:#000430;
     color: #edf2f4;
     /* border: #3a506b 2px solid; */
 }
@@ -25,7 +25,7 @@ body{
     gap: 10px   ;
 }
 #track-todo, #todolist{
-    border: #3a506b 2px solid;
+    border: #828dff 3px solid;
     width: 30vw;
     border-radius: 0.5rem;
     height: auto;
@@ -38,14 +38,7 @@ body{
     flex-direction: column;
     justify-content: space-evenly;
 }
-#progress-bar{
-    width: 100%;
-    height: 10px;
-    background-color: aquamarine;
-    
-    border-radius: 5px;
-    margin-top: 15px;
-}
+
 #progress{
     width: 50%;
     height: 10px;
@@ -95,8 +88,8 @@ body{
     color: white;
 }
 #add-task input{
-    background-color:#2b2d42;
-    border: #3a506b 2px solid;
+    background-color:#171c48;
+    border: #828dff 1px solid;
     border-radius: 0.5rem;
     height: 40px;
     color: aliceblue;
@@ -107,11 +100,13 @@ body{
 .task-list{
     list-style: none;
     /* padding: 10px; */
+    
 
 }
 .task-list li{
     margin: 10px;
-    border: #3a506b 2px solid;
+    background-color: #171c48;
+    border: #828dff 2px solid;
     padding: 10px;
     border-radius: 0.5rem;
     display: flex;
@@ -120,9 +115,9 @@ body{
 }
 
 .task-list li button{
-    background-color:#2b2d42;
-    border: #3a506b 2px solid;
-    border-radius: 0.5rem;
+    background-color: rgb(98, 128, 173);
+    border: #3a506b 0px solid;
+    border-radius: 0.7rem;
     color: aliceblue;
     padding: 5px;
     cursor: pointer;
@@ -133,3 +128,22 @@ body{
     gap: 10px;
 }
 
+@media screen and (max-width: 480px) {
+    #stats{
+        display: none;
+    }
+    /* .task-list li{
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    } */
+    #track-todo, #todolist{
+        width: 70vw;
+    }
+    #details{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+    
