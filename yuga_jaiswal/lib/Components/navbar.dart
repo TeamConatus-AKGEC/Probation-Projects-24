@@ -30,7 +30,7 @@ class Navbar extends StatelessWidget {
           switch (index) {
             case 0:
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => FlutterApp()));
+                  MaterialPageRoute(builder: (context) => HomeScreen()));
               break;
             case 1:
               Navigator.push(

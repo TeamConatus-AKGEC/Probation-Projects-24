@@ -67,6 +67,7 @@ class HomeScreen extends StatelessWidget {
               Container(
                 child: CarouselSlider(
                   options: CarouselOptions(
+                    autoPlay: true,
                     viewportFraction: 1.0,
                     enlargeCenterPage: true
                   ),

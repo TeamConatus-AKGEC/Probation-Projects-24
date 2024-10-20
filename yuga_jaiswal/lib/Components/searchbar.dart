@@ -7,6 +7,7 @@ class Searchbar extends StatelessWidget implements PreferredSizeWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         centerTitle: true,
         backgroundColor: Colors.white ,
         title: TextFormField(
@@ -26,17 +27,14 @@ class Searchbar extends StatelessWidget implements PreferredSizeWidget{
           ),
           actions: [
             Ink(
-              decoration: ShapeDecoration(
-                color: Colors.grey[200],
-                shape: CircleBorder(),
-              ),
-          child: IconButton(
-            icon: Icon(Icons.notifications_outlined),
-            color: Colors.grey,
-            iconSize: 40.0,
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => Notify()));
+              padding: EdgeInsets.fromLTRB(0.0,0.0,10.0,0.0),
+              child: IconButton(
+                icon: Icon(Icons.notifications_outlined),
+                color: Colors.grey,
+                iconSize: 40.0,
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Notify()));
             },
           ),
         ),
