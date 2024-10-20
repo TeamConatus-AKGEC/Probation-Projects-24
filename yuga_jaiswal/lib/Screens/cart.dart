@@ -1,10 +1,6 @@
 import 'package:ecommerce_app/Components/navbar.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(cart());
-}
-
 class cart extends StatelessWidget {
   const cart({super.key});
 

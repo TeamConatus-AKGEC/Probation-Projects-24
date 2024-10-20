@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:ecommerce_app/Screens/Notification.dart';
 class Searchbar extends StatelessWidget implements PreferredSizeWidget{
   const Searchbar({super.key});
 
@@ -26,17 +26,18 @@ class Searchbar extends StatelessWidget implements PreferredSizeWidget{
           ),
           actions: [
             Ink(
-              padding: EdgeInsets.fromLTRB(0.0,0.0,10.0,0.0), 
               decoration: ShapeDecoration(
-            
-            color: Colors.grey[200],
-            shape: CircleBorder(),
-          ),
+                color: Colors.grey[200],
+                shape: CircleBorder(),
+              ),
           child: IconButton(
             icon: Icon(Icons.notifications_outlined),
             color: Colors.grey,
             iconSize: 40.0,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Notify()));
+            },
           ),
         ),
         ],

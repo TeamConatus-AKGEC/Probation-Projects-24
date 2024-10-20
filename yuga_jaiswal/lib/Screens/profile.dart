@@ -1,6 +1,7 @@
 import 'package:ecommerce_app/Components/navbar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ecommerce_app/Screens/Notification.dart';
 class profile extends StatelessWidget {
   const profile({super.key});
 
@@ -77,7 +78,10 @@ class ProfilePage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
               child: TextButton(
-                onPressed: (){},
+                onPressed: (){
+                  Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Notify()));
+                },
                 child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,  // Ensures the Row takes only the required space
                     children: [
