@@ -40,17 +40,10 @@ class _ProductCardState extends State<ProductCard> {
               widget.product.name, style:TextStyle(fontSize: 18,fontWeight: FontWeight.bold)
             ),
             Text(widget.product.price,style:TextStyle(fontSize: 16,fontWeight: FontWeight.normal)),
-            // Text('Free Shipping', style: TextStyle(
-            //   fontSize: 16,
-            //   fontWeight: FontWeight.normal,
-            //   color: Colors.purple[100]))
             ElevatedButton(
             onPressed: () {
-              // Define action on press, such as adding to cart or navigating
-              print("Free Shipping clicked");
-            },
+              },
             child: Text('Free Shipping'),
-            
             )
             
         ],

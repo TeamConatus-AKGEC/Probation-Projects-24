@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:ecommerce_app/Components/scrollproduct.dart';
 import 'package:ecommerce_app/Components/searchbar.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:ecommerce_app/Screens/home.dart';
+import 'package:ecommerce_app/Screens/mobiles.dart';
+import 'package:ecommerce_app/Screens/electronics.dart';
 // import 'package:ecommerce_app/cart.dart';
 // import 'package:ecommerce_app/profile.dart';
 
@@ -94,14 +97,18 @@ class HomeScreen extends StatelessWidget {
                         padding: EdgeInsets.symmetric(horizontal: 16),
                         foregroundColor: Colors.black87,
                         minimumSize: Size(88, 36),
-                        shape: const RoundedRectangleBorder(
+                        shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(15)),
                         )
                       ),
                     ),
                     Padding(padding: EdgeInsets.only(right:12.0)),
                     OutlinedButton(
-                      onPressed: (){}, 
+                      onPressed: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (BuildContext context) => homes()));
+                      }, 
                       child: Text('Home'),
                       style: OutlinedButton.styleFrom(
                         padding: EdgeInsets.symmetric(horizontal: 16),
@@ -114,7 +121,11 @@ class HomeScreen extends StatelessWidget {
                     ),
                     Padding(padding: EdgeInsets.only(right:12.0)),
                     OutlinedButton(
-                      onPressed: (){}, 
+                      onPressed: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (BuildContext context) => Mobiles()));
+                      }, 
                       child: Text('Mobiles'),
                       style: OutlinedButton.styleFrom(
                         padding: EdgeInsets.symmetric(horizontal: 16),
@@ -127,7 +138,11 @@ class HomeScreen extends StatelessWidget {
                     ),
                     Padding(padding: EdgeInsets.only(right:12.0)),
                     OutlinedButton(
-                      onPressed: (){}, 
+                      onPressed: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (BuildContext context) => Electronics()));
+                      }, 
                       child: Text('Electronics'),
                       style: OutlinedButton.styleFrom(
                         padding: EdgeInsets.symmetric(horizontal: 16),

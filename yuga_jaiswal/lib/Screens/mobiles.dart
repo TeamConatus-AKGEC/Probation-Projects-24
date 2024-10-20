@@ -5,21 +5,21 @@ import 'package:ecommerce_app/Components/product_card.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ecommerce_app/Components/searchbar.dart';
 
-class fashion extends StatelessWidget {
-  const fashion({super.key});
+class Mobiles extends StatelessWidget {
+  const Mobiles({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "FashionPage",
+      title: "MobilePage",
       debugShowCheckedModeBanner: false,
-      home: FashionPage(),
+      home: MobilePage(),
     );
   }
 }
 
-class FashionPage extends StatelessWidget {
-  const FashionPage({super.key});
+class MobilePage extends StatelessWidget {
+  const MobilePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ class FashionPage extends StatelessWidget {
         children: [
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 15.0),
-            child: Text("Fashion",
+            child: Text("Mobiles",
                  style: GoogleFonts.poppins(fontSize: 50.0, fontWeight: FontWeight.bold),
             ),
           ),
@@ -77,33 +77,32 @@ class MyProduct {
   static List<Product> allProducts = [
     Product(
       id: 1,
-      name: 'Macbook',
-      price: '\$29,990',
-      image: 'assets/images/macbook.png'),
+      name: 'iPhone 16',
+      price: '\$990',
+      image: 'assets/images/phone.png'),
       Product(
       id: 1,
-      name: 'Macbook',
-      price: '\$29,990',
-      image: 'assets/images/macbook.png'),
+      name: 'iPhone 16',
+      price: '\$990',
+      image: 'assets/images/phone.png'),
       Product(
       id: 1,
-      name: 'Macbook',
-      price: '\$29,990',
-      image: 'assets/images/macbook.png'),
+      name: 'iPhone 16',
+      price: '\$990',
+      image: 'assets/images/phone.png'),
       Product(
       id: 1,
-      name: 'Macbook',
-      price: '\$29,990',
-      image: 'assets/images/macbook.png'),
+      name: 'iPhone 16',
+      price: '\$990',
+      image: 'assets/images/phone.png'),Product(
+      id: 1,
+      name: 'iPhone 16',
+      price: '\$990',
+      image: 'assets/images/phone.png'),
       Product(
       id: 1,
-      name: 'Macbook',
-      price: '\$29,990',
-      image: 'assets/images/macbook.png'),
-      Product(
-      id: 1,
-      name: 'Macbook',
-      price: '\$29,990',
-      image: 'assets/images/macbook.png'),
+      name: 'iPhone 16',
+      price: '\$990',
+      image: 'assets/images/phone.png'),
   ];
 }

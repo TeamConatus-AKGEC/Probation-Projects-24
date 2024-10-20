@@ -5,21 +5,21 @@ import 'package:ecommerce_app/Components/product_card.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ecommerce_app/Components/searchbar.dart';
 
-class fashion extends StatelessWidget {
-  const fashion({super.key});
+class Electronics extends StatelessWidget {
+  const Electronics({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "FashionPage",
+      title: "ElectronicsPage",
       debugShowCheckedModeBanner: false,
-      home: FashionPage(),
+      home: ElectronicsPage(),
     );
   }
 }
 
-class FashionPage extends StatelessWidget {
-  const FashionPage({super.key});
+class ElectronicsPage extends StatelessWidget {
+  const ElectronicsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,13 +32,13 @@ class FashionPage extends StatelessWidget {
         children: [
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 15.0),
-            child: Text("Fashion",
+            child: Text("Electronics",
                  style: GoogleFonts.poppins(fontSize: 50.0, fontWeight: FontWeight.bold),
             ),
           ),
           Container(
                     height: 10, // Height of the line
-                    width:250 , // Full-width line
+                    width:350 , // Full-width line
                     color: Colors.orange, // Line color
                   ),
           SizedBox(height: 5),
@@ -77,33 +77,33 @@ class MyProduct {
   static List<Product> allProducts = [
     Product(
       id: 1,
-      name: 'Macbook',
-      price: '\$29,990',
-      image: 'assets/images/macbook.png'),
+      name: 'Sony Headphones',
+      price: '\$270',
+      image: 'assets/images/head.png'),
       Product(
       id: 1,
-      name: 'Macbook',
-      price: '\$29,990',
-      image: 'assets/images/macbook.png'),
+      name: 'Sony Headphones',
+      price: '\$270',
+      image: 'assets/images/head.png'),
       Product(
       id: 1,
-      name: 'Macbook',
-      price: '\$29,990',
-      image: 'assets/images/macbook.png'),
+      name: 'Sony Headphones',
+      price: '\$270',
+      image: 'assets/images/head.png'),
       Product(
       id: 1,
-      name: 'Macbook',
-      price: '\$29,990',
-      image: 'assets/images/macbook.png'),
+      name: 'Sony Headphones',
+      price: '\$270',
+      image: 'assets/images/head.png'),
       Product(
       id: 1,
-      name: 'Macbook',
-      price: '\$29,990',
-      image: 'assets/images/macbook.png'),
+      name: 'Sony Headphones',
+      price: '\$270',
+      image: 'assets/images/head.png'),
       Product(
       id: 1,
-      name: 'Macbook',
-      price: '\$29,990',
-      image: 'assets/images/macbook.png'),
+      name: 'Sony Headphones',
+      price: '\$270',
+      image: 'assets/images/head.png'),
   ];
 }

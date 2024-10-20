@@ -5,21 +5,21 @@ import 'package:ecommerce_app/Components/product_card.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ecommerce_app/Components/searchbar.dart';
 
-class fashion extends StatelessWidget {
-  const fashion({super.key});
+class homes extends StatelessWidget {
+  const homes({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "FashionPage",
+      title: "HomePage",
       debugShowCheckedModeBanner: false,
-      home: FashionPage(),
+      home: HomePage(),
     );
   }
 }
 
-class FashionPage extends StatelessWidget {
-  const FashionPage({super.key});
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,13 +32,13 @@ class FashionPage extends StatelessWidget {
         children: [
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 15.0),
-            child: Text("Fashion",
+            child: Text("Home",
                  style: GoogleFonts.poppins(fontSize: 50.0, fontWeight: FontWeight.bold),
             ),
           ),
           Container(
                     height: 10, // Height of the line
-                    width:250 , // Full-width line
+                    width:220 , // Full-width line
                     color: Colors.orange, // Line color
                   ),
           SizedBox(height: 5),
@@ -77,33 +77,33 @@ class MyProduct {
   static List<Product> allProducts = [
     Product(
       id: 1,
-      name: 'Macbook',
-      price: '\$29,990',
-      image: 'assets/images/macbook.png'),
+      name: 'Mixer',
+      price: '\$90',
+      image: 'assets/images/mixer.jpg'),
       Product(
       id: 1,
-      name: 'Macbook',
-      price: '\$29,990',
-      image: 'assets/images/macbook.png'),
+      name: 'Mixer',
+      price: '\$90',
+      image: 'assets/images/mixer.jpg'),
       Product(
       id: 1,
-      name: 'Macbook',
-      price: '\$29,990',
-      image: 'assets/images/macbook.png'),
+      name: 'Mixer',
+      price: '\$90',
+      image: 'assets/images/mixer.jpg'),
       Product(
       id: 1,
-      name: 'Macbook',
-      price: '\$29,990',
-      image: 'assets/images/macbook.png'),
+      name: 'Mixer',
+      price: '\$90',
+      image: 'assets/images/mixer.jpg'),
       Product(
       id: 1,
-      name: 'Macbook',
-      price: '\$29,990',
-      image: 'assets/images/macbook.png'),
+      name: 'Mixer',
+      price: '\$90',
+      image: 'assets/images/mixer.jpg'),
       Product(
       id: 1,
-      name: 'Macbook',
-      price: '\$29,990',
-      image: 'assets/images/macbook.png'),
+      name: 'Mixer',
+      price: '\$90',
+      image: 'assets/images/mixer.jpg'),
   ];
 }

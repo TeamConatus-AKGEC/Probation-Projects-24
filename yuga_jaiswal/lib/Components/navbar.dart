@@ -36,11 +36,11 @@ class Navbar extends StatelessWidget {
               break;
             case 1:
               Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => profile()));
+                  context, MaterialPageRoute(builder: (context) => cart()));
               break;
             case 2:
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => cart()));
+                  MaterialPageRoute(builder: (context) => profile()));
               break;
             default:
               break;
