@@ -16,7 +16,7 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         leading: IconButton(
             onPressed: () {},
-            icon: Icon(Icons.menu),
+            icon: const Icon(Icons.menu),
         ),
         titleSpacing: 0.0,
         title: Text('Hello Sneha,',
@@ -25,93 +25,183 @@ class _HomeState extends State<Home> {
         actions: [
           IconButton(
               onPressed: () {},
-              icon: Icon(Icons.account_circle),
+              icon: const Icon(Icons.account_circle),
               color: Colors.black,
-              padding: EdgeInsets.only(right: 20.0),
+              padding: const EdgeInsets.only(right: 20.0),
           ),
         ],
         bottom:  PreferredSize(
-          preferredSize: Size.fromHeight(70.0),
-          child: Container(
-            child: SafeArea(
-              child: SingleChildScrollView(
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: TextField(
-                        decoration: InputDecoration(
-                          hintText: 'Search here...',
-                          hintStyle: TextStyle(
-                            color: Colors.grey,
-                          ),
-                          prefixIcon: Icon(Icons.search ,
-                            color: Colors.grey,),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(40),
-                            borderSide: BorderSide.none,
-                          ),
-                          contentPadding: EdgeInsets.zero,
-                          filled: true,
-                          fillColor: Colors.white,
+          preferredSize: const Size.fromHeight(70.0),
+          child: SafeArea(
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        hintText: 'Search here...',
+                        hintStyle: const TextStyle(
+                          color: Colors.grey,
                         ),
+                        prefixIcon: const Icon(Icons.search ,
+                          color: Colors.grey,),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(40),
+                          borderSide: BorderSide.none,
+                        ),
+                        contentPadding: EdgeInsets.zero,
+                        filled: true,
+                        fillColor: Colors.white,
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
           ),
       ),
       ),
       body: Container(
-        margin: EdgeInsets.all(10.0),
-          child: showItem()),
-      );
+        color: Colors.white,
+        child: Column(
+          children: [
+            Container(
+              margin: const EdgeInsets.all(10.0),
+              child: showCategories(),
+            ),
+            Text("Top Deals", style: AppWidges.boldTextFeildStyle()),
+            Container(
+              margin: const EdgeInsets.all(10.0),
+              child: showItems(),
+            )
+          ],
+        ),
+      ),
+    );
   }
 
-  Widget showItem() {
+  Widget showCategories() {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          _buildItem("images/fashion.jpeg", "Fashion"),
-          _buildItem("images/mobile.jpeg", "Mobile"),
-          _buildItem("images/grocery.jpeg", "Grocery"),
-          _buildItem("images/pharmacy.jpeg", "Pharmacy"),
-          _buildItem("images/travel.jpeg", "Travel"),
-          _buildItem("images/electronics.jpeg", "Electronics"),
+          _buildCategories("images/fashion.jpeg", "Fashion"),
+          _buildCategories("images/mobile.jpeg", "Mobile"),
+          _buildCategories("images/grocery.jpeg", "Grocery"),
+          _buildCategories("images/pharmacy.jpeg", "Pharmacy"),
+          _buildCategories("images/travel.jpeg", "Travel"),
+          _buildCategories("images/electronics.jpeg", "Electronics"),
         ],
       ),
     );
   }
 
-  Widget _buildItem(String imagePath, String label) {
-    return Material(
-      elevation: 2.0,
-      borderRadius: BorderRadius.circular(10),
-      child: Container(
-        decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
-        padding: const EdgeInsets.all(8),
-        width: 80, // Adjust width as needed
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
+  Widget _buildCategories(String imagePath, String label) {
+    return Container(
+      margin: const EdgeInsets.only(right: 15.0),
+      child: Material(
+        elevation: 5.0,
+        borderRadius: BorderRadius.circular(10),
+        child: Container(
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
+          padding: const EdgeInsets.all(8),
+          width: 80, // Adjust width as needed
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Image.asset(
+                imagePath,
+                height: 50,
+                width: 50,
+                fit: BoxFit.cover,
+              ),
+              const SizedBox(height: 3), // Space between image and text
+              Text(
+                label,
+                style: const TextStyle(fontSize: 12),// Adjust text style as needed
+                textAlign: TextAlign.center,
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+
+  Widget showItems(){
+    return SingleChildScrollView(
+      child: Column(
           children: [
-            Image.asset(
-              imagePath,
-              height: 50,
-              width: 50,
-              fit: BoxFit.cover,
+            Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  _builtItems("images/iphone.jpeg", "\$42,999", "Apple iPhone 13" ),
+                  _builtItems("images/samsung.jpeg", "\$75,999", "Samsung Galaxy S23" ),
+                  ]
             ),
-            SizedBox(height: 3), // Space between image and text
-            Text(
-              label,
-              style: TextStyle(fontSize: 12), // Adjust text style as needed
-              textAlign: TextAlign.center,
-            ),
+            Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                _builtItems("images/iQOO.jpeg", "\$19,998", "iQOO Z9s 5G" ),
+                _builtItems("images/apple.webp", "\$59,990", "Apple MacBook Air" ),
+                ]
+             ),
           ],
         ),
+      );
+  }
+
+  Widget _builtItems(String imagePath , String price , String label){
+    return Material(
+        child: Row(
+            children: [
+              GestureDetector(
+                onTap: () {
+                // Navigator.push(
+                // context,
+                // // MaterialPageRoute(
+                // // builder: (context) => const Details()),
+                // // );
+                },
+                child: Container(
+                  margin: const EdgeInsets.all(4),
+                  child: Material(
+                    elevation: 5.0,
+                    borderRadius: BorderRadius.circular(20),
+                    child: Container(
+                      padding: const EdgeInsets.all(14),
+                      child: Column(
+                      children: [
+                        Image.asset(
+                        imagePath,
+                        height: 180,
+                        width: 150,
+                        fit: BoxFit.cover,
+                        ),
+                        Text(
+                          price,
+                          style: AppWidges.semiBoldTextFeildStyle(),
+                        ),
+                        const SizedBox(
+                          height: 10.0,
+                        ),
+                        Text(
+                          label,
+                          style: AppWidges.LightTextFeildStyle(),
+                        ),
+                        const SizedBox(
+                          height: 5.0,
+                        ),
+                        ],
+                      ),
+                    )
+                  ),
+                ),
+              ),
+          ]
       ),
     );
   }
