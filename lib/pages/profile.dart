@@ -64,8 +64,44 @@ class _ProfileState extends State<Profile> {
                 ),
               ),
               );
-            }
-            )
+              }
+            ),
+          ),
+          const SizedBox(height: 10,),
+          SizedBox(
+            height: 180,
+            child: ListView.separated(
+              physics: const BouncingScrollPhysics(),
+              scrollDirection: Axis.horizontal,
+                itemBuilder: (context, index){
+                  return const SizedBox(
+                    width: 160,
+                    child: Card(
+                      shadowColor: Colors.black12,
+                      child: Padding(padding: EdgeInsets.all(15),
+                      child: Column(
+                        children: [ Icon(Icons.person,
+                            size: 30,
+                        ),
+                          SizedBox(height: 10,),
+                          Text("Enter your Phone Number",
+                          textAlign: TextAlign.center,
+                          ),
+                          Spacer(),
+                          TextField(style: TextStyle(
+                            height: 2,
+                            fontSize: 18,
+                              ) ,
+                          )
+                        ],
+                      ),
+                      ),
+                    ),
+                  );
+                },
+                separatorBuilder: (context,index)=> const Padding(padding: EdgeInsets.only(right: 5)),
+                itemCount: 3
+            ),
           )
         ],
       ),
