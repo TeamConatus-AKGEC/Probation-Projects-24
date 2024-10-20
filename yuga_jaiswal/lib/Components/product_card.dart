@@ -1,5 +1,7 @@
+import 'package:ecommerce_app/Screens/product_detail.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce_app/Components/product.dart';
+import 'package:ecommerce_app/Screens/fashion.dart';
 
 class ProductCard extends StatefulWidget {
 
@@ -42,6 +44,9 @@ class _ProductCardState extends State<ProductCard> {
             Text(widget.product.price,style:TextStyle(fontSize: 16,fontWeight: FontWeight.normal)),
             ElevatedButton(
             onPressed: () {
+              Navigator.push(
+                context,
+               MaterialPageRoute(builder: (BuildContext context) => ProductDetail(product: widget.product, allProducts: MyProduct.allProducts,)));
               },
             child: Text('Free Shipping'),
             )

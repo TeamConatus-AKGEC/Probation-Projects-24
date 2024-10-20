@@ -76,31 +76,26 @@ class MobilePage extends StatelessWidget {
 class MyProduct {
   static List<Product> allProducts = [
     Product(
-      id: 1,
       name: 'iPhone 16',
       price: '\$990',
       image: 'assets/images/phone.png'),
       Product(
-      id: 1,
       name: 'iPhone 16',
       price: '\$990',
       image: 'assets/images/phone.png'),
       Product(
-      id: 1,
       name: 'iPhone 16',
       price: '\$990',
       image: 'assets/images/phone.png'),
       Product(
-      id: 1,
-      name: 'iPhone 16',
-      price: '\$990',
-      image: 'assets/images/phone.png'),Product(
-      id: 1,
       name: 'iPhone 16',
       price: '\$990',
       image: 'assets/images/phone.png'),
       Product(
-      id: 1,
+      name: 'iPhone 16',
+      price: '\$990',
+      image: 'assets/images/phone.png'),
+      Product(
       name: 'iPhone 16',
       price: '\$990',
       image: 'assets/images/phone.png'),

@@ -7,10 +7,11 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:ecommerce_app/Screens/home.dart';
 import 'package:ecommerce_app/Screens/mobiles.dart';
 import 'package:ecommerce_app/Screens/electronics.dart';
+import 'package:ecommerce_app/Components/product.dart';
 // import 'package:ecommerce_app/cart.dart';
 // import 'package:ecommerce_app/profile.dart';
 
-final List<String> imgList = [
+List<String> imgList = [
   'assets/images/sale.jpg',
   'assets/images/sale6.jpg',
   'assets/images/sale5.jpg',
@@ -19,7 +20,19 @@ final List<String> imgList = [
   'assets/images/sale3.jpg',
   'assets/images/sale4.jpg',
 ];
+List<Product> hotSalesProducts = [
+  Product(id: 1,name: 'Macbook Air M1', price: '\$29,999', image: 'assets/images/macbook.png'),
+  Product(id: 1,name: 'Mixer', price: '\$90', image: 'assets/images/mixer.jpg'),
+  Product(id: 1,name: 'iPhone 16', price: '\$990', image: 'assets/images/phone.png'),
+  Product(id: 1,name: 'Sony Headphones', price: '\$270', image: 'assets/images/head.png'),
+];
 
+List<Product> recentViewedProducts = [
+  Product(id: 1,name: 'Macbook Air M1', price: '\$29,999', image: 'assets/images/macbook.png'),
+  Product(id: 1,name: 'Macbook Air M1', price: '\$29,999', image: 'assets/images/macbook.png'),
+  Product(id: 1,name: 'Macbook Air M1', price: '\$29,999', image: 'assets/images/macbook.png'),
+  Product(id: 1,name: 'Macbook Air M1', price: '\$29,999', image: 'assets/images/macbook.png'),
+];
 void main() {
   runApp(FlutterApp());
 } 
@@ -235,29 +248,11 @@ class HomeScreen extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   child:  Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                          scrollproduct(
-                                image: 'assets/images/macbook.png', 
-                                name: 'Macbook Air M1',
-                                price: '\$29,999',
-                           ),
-                          scrollproduct(
-                                image: 'assets/images/macbook.png',
-                                name: 'Macbook Air M1',
-                                price: '\$29,999',
-                           ),
-                          scrollproduct(
-                                image: 'assets/images/macbook.png', 
-                                name: 'Macbook Air M1',
-                                price: '\$29,999',
-                           ),
-                          scrollproduct(
-                                image: 'assets/images/macbook.png', 
-                                name: 'Macbook Air M1',
-                                price: '\$29,999',
-                           ),      
-                    ],
-
+                    children: hotSalesProducts.map((product) => scrollproduct(
+                        product: product,
+                        allProducts: hotSalesProducts,
+                    )).toList()
+                  
                   ),
 
                 ),
@@ -279,28 +274,10 @@ class HomeScreen extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   child:  Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                          scrollproduct(
-                                image: 'assets/images/macbook.png', 
-                                name: 'Macbook Air M1',
-                                price: '\$29,999',
-                           ),
-                          scrollproduct(
-                                image: 'assets/images/macbook.png', 
-                                name: 'Macbook Air M1',
-                                price: '\$29,999',
-                           ),
-                          scrollproduct(
-                                image: 'assets/images/macbook.png', 
-                                name: 'Macbook Air M1',
-                                price: '\$29,999',
-                           ),
-                          scrollproduct(
-                                image: 'assets/images/macbook.png', 
-                                name: 'Macbook Air M1',
-                                price: '\$29,999',
-                           ),      
-                    ],
+                    children: recentViewedProducts.map((product) => scrollproduct(
+                        product: product,
+                        allProducts: recentViewedProducts,
+                    )).toList()
 
                   ),
 

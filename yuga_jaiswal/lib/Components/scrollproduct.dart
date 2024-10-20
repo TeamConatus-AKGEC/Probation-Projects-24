@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:ecommerce_app/Components/product.dart';
+import 'package:ecommerce_app/Screens/product_detail.dart';
 class scrollproduct extends StatelessWidget {
-  final String image;
-  final String name;
-  final String price;
-
-  scrollproduct({required this.image, required this.name, required this.price});
+  final Product product;
+  final List<Product> allProducts;
+  scrollproduct({required this.product, required this.allProducts});
 
   @override
   Widget build(BuildContext context) {
@@ -18,18 +18,21 @@ class scrollproduct extends StatelessWidget {
         ),
         child: Column(
           children: [
-            Image.asset(image, height: 100), 
+            Image.asset(product.image, height: 100), 
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 8.0),
-              child: Text(name, style: TextStyle(fontSize: 16)),
+              child: Text(product.name, style: TextStyle(fontSize: 16)),
             ),
-            Text(price, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+            Text(product.price, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 8.0),
               child: ElevatedButton(
                 onPressed: () {
-                  
-                },
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ProductDetail(
+                        product: product,allProducts: allProducts)));},
                 child: Text('Free shipping'),
               ),
             ),
