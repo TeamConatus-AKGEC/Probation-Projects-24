@@ -21,17 +21,17 @@ List<String> imgList = [
   'assets/images/sale4.jpg',
 ];
 List<Product> hotSalesProducts = [
-  Product(id: 1,name: 'Macbook Air M1', price: '\$29,999', image: 'assets/images/macbook.png'),
-  Product(id: 1,name: 'Mixer', price: '\$90', image: 'assets/images/mixer.jpg'),
-  Product(id: 1,name: 'iPhone 16', price: '\$990', image: 'assets/images/phone.png'),
-  Product(id: 1,name: 'Sony Headphones', price: '\$270', image: 'assets/images/head.png'),
+  Product(name: 'Macbook Air M1', price: '\$29,999', image: 'assets/images/macbook.png'),
+  Product(name: 'Mixer', price: '\$90', image: 'assets/images/mixer.jpg'),
+  Product(name: 'iPhone 16', price: '\$990', image: 'assets/images/phone.png'),
+  Product(name: 'Sony Headphones', price: '\$270', image: 'assets/images/head.png'),
 ];
 
 List<Product> recentViewedProducts = [
-  Product(id: 1,name: 'Macbook Air M1', price: '\$29,999', image: 'assets/images/macbook.png'),
-  Product(id: 1,name: 'Macbook Air M1', price: '\$29,999', image: 'assets/images/macbook.png'),
-  Product(id: 1,name: 'Macbook Air M1', price: '\$29,999', image: 'assets/images/macbook.png'),
-  Product(id: 1,name: 'Macbook Air M1', price: '\$29,999', image: 'assets/images/macbook.png'),
+  Product(name: 'Macbook Air M1', price: '\$29,999', image: 'assets/images/macbook.png'),
+  Product(name: 'Macbook Air M1', price: '\$29,999', image: 'assets/images/macbook.png'),
+  Product(name: 'Macbook Air M1', price: '\$29,999', image: 'assets/images/macbook.png'),
+  Product(name: 'Macbook Air M1', price: '\$29,999', image: 'assets/images/macbook.png'),
 ];
 void main() {
   runApp(FlutterApp());

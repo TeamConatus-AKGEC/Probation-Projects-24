@@ -76,32 +76,30 @@ class ElectronicsPage extends StatelessWidget {
 class MyProduct {
   static List<Product> allProducts = [
     Product(
-      id: 1,
       name: 'Sony Headphones',
       price: '\$270',
       image: 'assets/images/head.png'),
-      Product(
-      id: 1,
+       Product(
       name: 'Sony Headphones',
       price: '\$270',
       image: 'assets/images/head.png'),
-      Product(
-      id: 1,
+       Product(
       name: 'Sony Headphones',
       price: '\$270',
       image: 'assets/images/head.png'),
-      Product(
-      id: 1,
+       Product(
       name: 'Sony Headphones',
       price: '\$270',
       image: 'assets/images/head.png'),
-      Product(
-      id: 1,
+       Product(
       name: 'Sony Headphones',
       price: '\$270',
       image: 'assets/images/head.png'),
-      Product(
-      id: 1,
+       Product(
+      name: 'Sony Headphones',
+      price: '\$270',
+      image: 'assets/images/head.png'),
+       Product(
       name: 'Sony Headphones',
       price: '\$270',
       image: 'assets/images/head.png'),

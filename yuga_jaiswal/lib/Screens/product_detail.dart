@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/Screens/buy.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce_app/Components/product.dart';
 import 'package:ecommerce_app/Components/navbar.dart';
@@ -57,7 +58,7 @@ class ProductDetail extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 0),
+              padding: const EdgeInsets.symmetric(horizontal: 16),
               child:Column(
                 children: [
                   SizedBox(
@@ -75,7 +76,11 @@ class ProductDetail extends StatelessWidget {
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (BuildContext context) => Buy(product: product)));
+                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.orange,
                         padding: EdgeInsets.symmetric(vertical: 13),

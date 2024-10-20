@@ -76,32 +76,26 @@ class HomePage extends StatelessWidget {
 class MyProduct {
   static List<Product> allProducts = [
     Product(
-      id: 1,
       name: 'Mixer',
       price: '\$90',
       image: 'assets/images/mixer.jpg'),
       Product(
-      id: 1,
       name: 'Mixer',
       price: '\$90',
       image: 'assets/images/mixer.jpg'),
       Product(
-      id: 1,
       name: 'Mixer',
       price: '\$90',
       image: 'assets/images/mixer.jpg'),
       Product(
-      id: 1,
       name: 'Mixer',
       price: '\$90',
       image: 'assets/images/mixer.jpg'),
       Product(
-      id: 1,
       name: 'Mixer',
       price: '\$90',
       image: 'assets/images/mixer.jpg'),
       Product(
-      id: 1,
       name: 'Mixer',
       price: '\$90',
       image: 'assets/images/mixer.jpg'),
