@@ -1,4 +1,7 @@
 import 'package:app_design/pages/details.dart';
+import 'package:app_design/pages/profile.dart';
+import 'package:app_design/pages/show_menu.dart';
+import 'package:app_design/pages/show_menu.dart';
 import 'package:app_design/widges/widges_support.dart';
 import 'package:flutter/material.dart';
 
@@ -15,20 +18,22 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.menu),
-        ),
         titleSpacing: 0.0,
-        title: Text('Hello Sneha,',
-        style: AppWidges.boldTextFeildStyle()),
+        title: const Text('Hello Sneha,',
+        style: TextStyle(fontFamily: 'Playwrite',fontWeight: FontWeight.bold) ),
         backgroundColor: Colors.red[900],
         actions: [
           IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const Profile()),
+                );
+              },
               icon: const Icon(Icons.account_circle),
               color: Colors.black,
-              padding: const EdgeInsets.only(right: 20.0),
+              padding: const EdgeInsets.all(10.0),
           ),
         ],
         bottom:  PreferredSize(
@@ -86,8 +91,21 @@ class _HomeState extends State<Home> {
           ),
         ),
       ),
+      drawer: const Drawer(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              ShowMenu(),
+              DrawerList(),
+            ],
+          ),
+        ),
+      ),
     );
   }
+
+
+
 
   Widget showCategories() {
     return SingleChildScrollView(
@@ -140,7 +158,7 @@ class _HomeState extends State<Home> {
 
 
   Widget showItems(){
-    return Column(
+      return Column(
           children: [
             Row(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -157,7 +175,7 @@ class _HomeState extends State<Home> {
                 ]
              ),
           ],
-        );
+      );
   }
 
   Widget _builtItems(String imagePath , String price , String label){
@@ -239,11 +257,11 @@ class _HomeState extends State<Home> {
           children: [
             GestureDetector(
               onTap: () {
-                // Navigator.push(
-                // context,
-                // // MaterialPageRoute(
-                // // builder: (context) => const Details()),
-                // // );
+                Navigator.push(
+                context,
+                MaterialPageRoute(
+                builder: (context) => const Details()),
+                );
               },
               child: Container(
                 margin: const EdgeInsets.all(4),

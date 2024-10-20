@@ -7,7 +7,7 @@ class AppWidges {
         color: Colors.black,
         fontSize: 20.0,
         fontWeight: FontWeight.bold,
-        fontFamily: 'Playwrite');
+        fontFamily: 'Poppins');
   }
   static TextStyle LightTextFeildStyle() {
     return const TextStyle(
