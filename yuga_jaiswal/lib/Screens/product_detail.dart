@@ -94,7 +94,6 @@ class ProductDetail extends StatelessWidget {
           ],
          ),
       ),
-
     );
   }
 }

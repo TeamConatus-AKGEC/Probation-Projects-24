@@ -83,9 +83,7 @@ class _BuyState extends State<Buy> {
                   direction: Axis.vertical,
                   onPressed: (int index) {
                     setState(() {
-                      // Toggle the selected state for the button
                       _selected[index] = !_selected[index];
-                      // If you want only one button to be selected at a time
                       for (int i = 0; i < _selected.length; i++) {
                         if (i != index) {
                           _selected[i] = false;
@@ -100,7 +98,6 @@ class _BuyState extends State<Buy> {
                   color: Colors.grey,
                   isSelected: _selected,
                   children: UPI,
-                  // Add padding between buttons
                   //padding: EdgeInsets.symmetric(vertical: 8.0),
                 ),
               ),
@@ -109,7 +106,6 @@ class _BuyState extends State<Buy> {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                    // Implement your continue button action here
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.orange,
