@@ -2,8 +2,8 @@ const addBtn = document.querySelector("#add-button");
 const taskList = document.querySelector(".task-list");
 const numr = document.querySelector("#nr");
 const denr = document.querySelector("#dr");
-let count = 0; 
-let done = 0 
+let totalTask = 0; 
+let done = 0;
 
 addBtn.addEventListener("click",addTask)
 function addTask(){
@@ -15,8 +15,9 @@ function addTask(){
         alert("please enter a task");
     }
     else{
-        denr.textContent = ++count;
-        // console.log(count);
+        denr.textContent = ++totalTask;
+        // console.log(totalTask);
+        let isTaskDone = false;
         
         const listItem = document.createElement("li")
         const taskSpan = document.createElement("span")
@@ -35,8 +36,11 @@ function addTask(){
         // listItem.appendChild(dltBtn);
         dltBtn.addEventListener("click", function (){
             listItem.remove();
-            denr.textContent = --count;
-            numr.textContent = --done;
+            denr.textContent = --totalTask;
+            if(isTaskDone==true){
+                numr.textContent = --done;
+
+            }
             dltBtn.disabled=true;
         })
 
@@ -49,6 +53,7 @@ function addTask(){
         taskDone.addEventListener("click", function(){
             taskSpan.style.textDecoration="line-through";
             numr.textContent = ++done;
+            isTaskDone = true;
             taskDone.disabled=true;
         })
 
