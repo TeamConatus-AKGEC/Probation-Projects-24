@@ -1,3 +1,4 @@
+import 'package:app_design/pages/details.dart';
 import 'package:app_design/widges/widges_support.dart';
 import 'package:flutter/material.dart';
 
@@ -62,20 +63,27 @@ class _HomeState extends State<Home> {
           ),
       ),
       ),
-      body: Container(
-        color: Colors.white,
-        child: Column(
-          children: [
-            Container(
-              margin: const EdgeInsets.all(10.0),
-              child: showCategories(),
-            ),
-            Text("Top Deals", style: AppWidges.boldTextFeildStyle()),
-            Container(
-              margin: const EdgeInsets.all(10.0),
-              child: showItems(),
-            )
-          ],
+      body: SingleChildScrollView(
+        child: Container(
+          color: Colors.white,
+          child: Column(
+            children: [
+              Container(
+                margin: const EdgeInsets.all(10.0),
+                child: showCategories(),
+              ),
+              Text("Top Deals", style: AppWidges.boldTextFeildStyle()),
+              Container(
+                margin: const EdgeInsets.all(10.0),
+                child: showItems(),
+              ),
+              Text("Trending Deals Under \u20B9499", style: AppWidges.boldTextFeildStyle()),
+              Container(
+                margin: const EdgeInsets.all(10.0),
+                child: showItems1(),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -132,26 +140,24 @@ class _HomeState extends State<Home> {
 
 
   Widget showItems(){
-    return SingleChildScrollView(
-      child: Column(
+    return Column(
           children: [
             Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  _builtItems("images/iphone.jpeg", "\$42,999", "Apple iPhone 13" ),
-                  _builtItems("images/samsung.jpeg", "\$75,999", "Samsung Galaxy S23" ),
+                  _builtItems("images/iphone.jpeg", "\u20B942,999", "Apple iPhone 13" ),
+                  _builtItems("images/samsung.jpeg", "\u20B975,999", "Samsung Galaxy S23" ),
                   ]
             ),
             Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                _builtItems("images/iQOO.jpeg", "\$19,998", "iQOO Z9s 5G" ),
-                _builtItems("images/apple.webp", "\$59,990", "Apple MacBook Air" ),
+                _builtItems("images/iQOO.jpeg", "\u20B919,998", "iQOO Z9s 5G" ),
+                _builtItems("images/apple.webp", "\u20B959,990", "Apple MacBook Air" ),
                 ]
              ),
           ],
-        ),
-      );
+        );
   }
 
   Widget _builtItems(String imagePath , String price , String label){
@@ -160,11 +166,11 @@ class _HomeState extends State<Home> {
             children: [
               GestureDetector(
                 onTap: () {
-                // Navigator.push(
-                // context,
-                // // MaterialPageRoute(
-                // // builder: (context) => const Details()),
-                // // );
+                Navigator.push(
+                context,
+                MaterialPageRoute(
+                builder: (context) => const Details()),
+                );
                 },
                 child: Container(
                   margin: const EdgeInsets.all(4),
@@ -201,6 +207,79 @@ class _HomeState extends State<Home> {
                   ),
                 ),
               ),
+          ]
+      ),
+    );
+  }
+
+  Widget showItems1(){
+    return Column(
+        children: [
+          Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                _builtItems1("images/candles.jpg", "\u20B9349", "24Pcs Decorative" ),
+                _builtItems1("images/accessories.jpeg", "\u20B9185", "Beautiful Accessories" ),
+              ]
+          ),
+          Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                _builtItems1("images/blanket.jpeg", "\u20B9499", "AC Conforter Blanket" ),
+                _builtItems1("images/lights.jpg", "\u20B9251", "LED String Serial Lights" ),
+              ]
+          ),
+        ],
+      );
+  }
+
+  Widget _builtItems1(String imagePath , String price , String label){
+    return Material(
+      child: Row(
+          children: [
+            GestureDetector(
+              onTap: () {
+                // Navigator.push(
+                // context,
+                // // MaterialPageRoute(
+                // // builder: (context) => const Details()),
+                // // );
+              },
+              child: Container(
+                margin: const EdgeInsets.all(4),
+                child: Material(
+                    elevation: 5.0,
+                    borderRadius: BorderRadius.circular(20),
+                    child: Container(
+                      padding: const EdgeInsets.all(14),
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            imagePath,
+                            height: 180,
+                            width: 150,
+                            fit: BoxFit.cover,
+                          ),
+                          Text(
+                            price,
+                            style: AppWidges.semiBoldTextFeildStyle(),
+                          ),
+                          const SizedBox(
+                            height: 10.0,
+                          ),
+                          Text(
+                            label,
+                            style: AppWidges.LightTextFeildStyle(),
+                          ),
+                          const SizedBox(
+                            height: 5.0,
+                          ),
+                        ],
+                      ),
+                    )
+                ),
+              ),
+            ),
           ]
       ),
     );
