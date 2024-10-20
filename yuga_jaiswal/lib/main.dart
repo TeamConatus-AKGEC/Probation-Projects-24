@@ -8,7 +8,7 @@ import 'package:ecommerce_app/Screens/home.dart';
 import 'package:ecommerce_app/Screens/mobiles.dart';
 import 'package:ecommerce_app/Screens/electronics.dart';
 import 'package:ecommerce_app/Components/product.dart';
-// import 'package:ecommerce_app/cart.dart';
+import 'package:ecommerce_app/splash_screen.dart';
 // import 'package:ecommerce_app/profile.dart';
 
 List<String> imgList = [
@@ -44,7 +44,7 @@ class FlutterApp extends StatelessWidget {
 
       title: "eCommerce App",
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: SplashScreen(),
     ); //MaterialApp
   }
 }

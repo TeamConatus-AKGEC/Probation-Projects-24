@@ -7,8 +7,6 @@ class Navbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-          //type: BottomNavigationBarType.fixed,
-          //new
           backgroundColor: Colors.white,
           //selectedItemColor: Colors.white,
           //unselectedItemColor: Colors.white.withOpacity(.60),
