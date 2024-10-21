@@ -37,9 +37,9 @@ class HomePage extends StatelessWidget {
             ),
           ),
           Container(
-                    height: 10, // Height of the line
-                    width:220 , // Full-width line
-                    color: Colors.orange, // Line color
+                    height: 10, 
+                    width:220 , 
+                    color: Colors.orange,
                   ),
           SizedBox(height: 5),
           Expanded(
@@ -63,11 +63,7 @@ class HomePage extends StatelessWidget {
           )
         ]
       )
-      
-      
-      
-      
-    );
+      );
   }
 }
 

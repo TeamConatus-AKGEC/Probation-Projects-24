@@ -37,9 +37,9 @@ class FashionPage extends StatelessWidget {
             ),
           ),
           Container(
-                    height: 10, // Height of the line
-                    width:250 , // Full-width line
-                    color: Colors.orange, // Line color
+                    height: 10, 
+                    width:250 , 
+                    color: Colors.orange,
                   ),
           SizedBox(height: 5),
           Expanded(
@@ -63,10 +63,6 @@ class FashionPage extends StatelessWidget {
           )
         ]
       )
-      
-      
-      
-      
     );
   }
 }
@@ -76,28 +72,28 @@ class FashionPage extends StatelessWidget {
 class MyProduct {
   static List<Product> allProducts = [
     Product(
-      name: 'Macbook',
-      price: '\$29,990',
-      image: 'assets/images/macbook.png'),
+      name: 'Peter England',
+      price: '\$290',
+      image: 'assets/images/f1.jpg'),
       Product(
-      name: 'Macbook',
-      price: '\$29,990',
-      image: 'assets/images/macbook.png'),
+      name: 'Mufti',
+      price: '\$90',
+      image: 'assets/images/f2.jpg'),
       Product(
-      name: 'Macbook',
-      price: '\$29,990',
-      image: 'assets/images/macbook.png'),
+      name: 'Peter England',
+      price: '\$99',
+      image: 'assets/images/f3.jpg'),
       Product(
-      name: 'Macbook',
-      price: '\$29,990',
-      image: 'assets/images/macbook.png'),
+      name: 'U.S. Polo Assn.',
+      price: '\$500',
+      image: 'assets/images/f4.jpg'),
       Product(
-      name: 'Macbook',
-      price: '\$29,990',
-      image: 'assets/images/macbook.png'),
+      name: 'Allen Solly',
+      price: '\$50',
+      image: 'assets/images/f5.jpg'),
       Product(
-      name: 'Macbook',
-      price: '\$29,990',
-      image: 'assets/images/macbook.png'),
+      name: 'Highlander',
+      price: '\$100',
+      image: 'assets/images/f6.jpg'),
   ];
 }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:ecommerce_app/Components/navbar.dart';
 class Notify extends StatelessWidget {
   const Notify({super.key});
@@ -8,13 +7,14 @@ class Notify extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Text(
-              "Notification",
-               style: GoogleFonts.poppins(fontSize: 40.0, fontWeight: FontWeight.bold)
-              ),
-                centerTitle: true,
-                backgroundColor: Colors.white,
+        title: Text('Notification'),
+        backgroundColor: Colors.white,
+        elevation: 0,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back, color: Colors.black),
+          onPressed: () => Navigator.of(context).pop(),
         ),
+      ),
         backgroundColor: Colors.white,
         bottomNavigationBar: Navbar(),
         body: ListView(
@@ -23,75 +23,18 @@ class Notify extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
               child: TextButton(
                 onPressed: (){},
-                child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,  // Ensures the Row takes only the required space
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                            width: 100,
-                            height: 100,
-                            decoration: BoxDecoration(
-                         image: DecorationImage(
-                            
-                            image: AssetImage('assets/images/macbook.png'),
-                            fit: BoxFit.fitWidth
-                         )
-                      ),
-                          ),
-                          SizedBox(width: 30),  // Controls the space between the icon and text
-                          Text("Your order will be \ndelivered by tomorrow",style: TextStyle(fontSize: 16,color: Colors.grey[700]),),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Icon(Icons.arrow_forward_ios_rounded,size: 30,color: Colors.grey,),
-                        ]
-                      )
-                    ],
-                  ),
-              
-
+                child: Item(title: "Your order will be \ndelivered by tomorrow", image: 'assets/images/macbook.png'),
                 style: TextButton.styleFrom(
                        backgroundColor: Colors.grey[200],
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
                         ),
-                
-                  ),
+                ),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
               child: TextButton(
                 onPressed: (){},
-                child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,  // Ensures the Row takes only the required space
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                            width: 100,
-                            height: 100,
-                            decoration: BoxDecoration(
-                         image: DecorationImage(
-                            
-                            image: AssetImage('assets/images/mixer.jpg'),
-                            fit: BoxFit.fitWidth
-                         )
-                      ),
-                          ),
-                          SizedBox(width: 30),  // Controls the space between the icon and text
-                          Text("40% OFF on Philip Mixer",style: TextStyle(fontSize: 15.4,color: Colors.grey[700]),),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Icon(Icons.arrow_forward_ios_rounded,size: 30,color: Colors.grey,),
-                        ]
-                      )
-                    ],
-                  ),
-              
-
+                child: Item(title: "40% OFF on Philip\nMixer", image: 'assets/images/mixer.jpg'),
                 style: TextButton.styleFrom(
                        backgroundColor: Colors.grey[200],
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
@@ -103,5 +46,45 @@ class Notify extends StatelessWidget {
           ],
         ),
     );
+  }
+}
+
+class Item extends StatelessWidget {
+  final String title;
+  final String image;
+
+  const Item({
+    required this.title,
+    required this.image,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+        Row(
+         children: [
+            Container(
+                 width: 100,
+                 height: 100,
+                 decoration: BoxDecoration(
+                 image: DecorationImage(                    
+                    image: AssetImage(image),
+                    fit: BoxFit.fitWidth
+                     )
+                  ),
+            ),
+            SizedBox(width: 30),
+            Text(title,style: TextStyle(fontSize: 16,color: Colors.grey[700]),),
+         ],
+        ),
+        Row(
+          children: [
+             Icon(Icons.arrow_forward_ios_rounded,size: 30,color: Colors.grey,),
+           ]
+        )
+       ],
+   );
   }
 }

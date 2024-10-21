@@ -3,30 +3,43 @@ import 'package:ecommerce_app/Screens/cart.dart';
 import 'package:ecommerce_app/Screens/profile.dart';
 import 'package:ecommerce_app/main.dart';
 
-class Navbar extends StatelessWidget {
+class Navbar extends StatefulWidget {
+  const Navbar({super.key});
+
+  @override
+  State<Navbar> createState() => _NavbarState();
+}
+
+class _NavbarState extends State<Navbar> {
+  int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
           backgroundColor: Colors.white,
-          //selectedItemColor: Colors.white,
-          //unselectedItemColor: Colors.white.withOpacity(.60),
+          selectedItemColor: Colors.orangeAccent,
+          unselectedItemColor: Colors.grey,
           selectedFontSize: 14,
           unselectedFontSize: 14,
+          currentIndex: selectedIndex,
           items: [
         BottomNavigationBarItem(
-          icon: Icon(Icons.home, color: Colors.orangeAccent),
+          icon: Icon(
+            Icons.home),
           label: 'Home',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.shopping_cart_outlined, color: Colors.orangeAccent),
+          icon: Icon(Icons.shopping_cart_outlined),
           label: 'Cart',
         ),
         BottomNavigationBarItem(
-           icon: Icon(Icons.perm_identity_outlined, color: Colors.orangeAccent),
+           icon: Icon(Icons.perm_identity_outlined),
            label: 'Profile',
         ),
       ],
         onTap: (index) {
+           setState(() {
+          selectedIndex = index;  
+        });
           switch (index) {
             case 0:
               Navigator.push(context,

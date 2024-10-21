@@ -47,7 +47,7 @@ class _SettingsState extends State<Settings> {
           ),
           ListTile(
             title: Text('Language'),
-            subtitle: Text('Hindi'),
+            subtitle: Text('English'),
             trailing: Icon(Icons.arrow_forward_ios),
             onTap: () {},
           ),

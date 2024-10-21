@@ -28,9 +28,9 @@ List<Product> hotSalesProducts = [
 ];
 
 List<Product> recentViewedProducts = [
-  Product(name: 'Macbook Air M1', price: '\$29,999', image: 'assets/images/macbook.png'),
-  Product(name: 'Macbook Air M1', price: '\$29,999', image: 'assets/images/macbook.png'),
-  Product(name: 'Macbook Air M1', price: '\$29,999', image: 'assets/images/macbook.png'),
+  Product(name: 'iPhone 16', price: '\$990', image: 'assets/images/phone.png'),
+  Product(name: 'Sony Headphones', price: '\$270', image: 'assets/images/head.png'),
+  Product(name: 'Allen Solly', price: '\$99', image: 'assets/images/f1.jpg'),
   Product(name: 'Macbook Air M1', price: '\$29,999', image: 'assets/images/macbook.png'),
 ];
 void main() {
