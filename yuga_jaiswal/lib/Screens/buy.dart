@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ecommerce_app/Components/product.dart';
 import 'package:ecommerce_app/Components/navbar.dart';
 
-const List<Widget> UPI = <Widget>[
+const List<Widget> UPI = [
   Text('Google Pay'),
   Text('Amazon Pay'),
   Text('Credit Card/Debit Card'),
@@ -40,7 +40,7 @@ class _BuyState extends State<Buy> {
           padding: EdgeInsets.all(16.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
+            children: [
               Row(
                 children: [
                   Image.asset(widget.product.image, height: 80),

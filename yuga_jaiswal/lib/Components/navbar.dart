@@ -17,10 +17,10 @@ class _NavbarState extends State<Navbar> {
     return BottomNavigationBar(
           backgroundColor: Colors.white,
           selectedItemColor: Colors.orangeAccent,
-          unselectedItemColor: Colors.grey,
+          unselectedItemColor: Colors.orangeAccent,
           selectedFontSize: 14,
           unselectedFontSize: 14,
-          currentIndex: selectedIndex,
+          //currentIndex: selectedIndex,
           items: [
         BottomNavigationBarItem(
           icon: Icon(
@@ -37,9 +37,9 @@ class _NavbarState extends State<Navbar> {
         ),
       ],
         onTap: (index) {
-           setState(() {
-          selectedIndex = index;  
-        });
+        //    setState(() {
+        //   selectedIndex = index;  
+        // });
           switch (index) {
             case 0:
               Navigator.push(context,
