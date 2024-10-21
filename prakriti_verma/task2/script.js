@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
             taskList.appendChild(li);
-            taskInput.value = ""; // Clear input field
+            taskInput.value = ""; 
         }
     }
 });
