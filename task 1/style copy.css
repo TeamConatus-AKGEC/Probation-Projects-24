@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    padding: 10px 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4CAF50;
+    border: 2px solid black; 
+    border-radius: 0; 
+    padding: 10px; 
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white; 
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+input[type="text"] {
+    padding: 8px;
+    margin-right: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.account-options, .help-links {
+    margin-left: 15px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.shop-for-container {
+    display: inline;
+    position: relative;
+}
+
+.shop-for {
+    font-weight: bold;
+    color: #4CAF50;
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    animation: blink 9s infinite;
+}
+
+.shop-for:nth-child(1) {
+    animation-delay: 0s;
+}
+.shop-for:nth-child(2) {
+    animation-delay: 3s;
+}
+.shop-for:nth-child(3) {
+    animation-delay: 6s;
+}
+
+@keyframes blink {
+    0%, 20% { opacity: 0; }
+    25%, 45% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+}
+
+
+.products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px; 
+
+.product {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    margin: 10px;
+    width: 200px;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-container {
+    max-width: 800px;
+    margin: 0 auto; /* Center the footer content */
+    padding: 0 20px;
+}
+
+.footer-links, .social-media, .newsletter {
+    margin: 10px 0;
+}
+
+.footer-links a,
+.social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover,
+.social-media a:hover {
+    text-decoration: underline;
+}
+
+.newsletter input[type="email"] {
+    padding: 8px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.newsletter button {
+    padding: 8px 12px;
+    background-color: white;
+    color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.newsletter button:hover {
+    background-color: #ddd;
+}
