@@ -61,3 +61,37 @@
     background-color: #f0f0f5;
     transform: scale(1.01);
   }
+  .completed {
+    text-decoration: line-through;
+    color: #95a5a6;
+    opacity: 0.6;
+  }
+  i {
+    cursor: pointer;
+    color: #e74c3c;
+  }
+  i:hover {
+    color: #c0392b;
+  }
+  @media (max-width: 768px) {
+    .container {
+      width: 90%;
+      padding: 10px;
+      flex-wrap: wrap;
+    }
+    input[type="text"] {
+      width: 70%;
+      margin-bottom: 10px;
+      column-gap: 1vw;
+    }
+    .addbutton{
+      width: auto;
+      height: auto;
+    
+    }
+  }
+  @media (max-width: 319px) {
+    .addbutton{
+     margin-inline-start: 4.4vw;
+  }
+  }
