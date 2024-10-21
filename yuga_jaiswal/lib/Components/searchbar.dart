@@ -11,8 +11,7 @@ class Searchbar extends StatelessWidget implements PreferredSizeWidget{
         centerTitle: true,
         backgroundColor: Colors.white ,
         title: TextFormField(
-              
-              decoration: InputDecoration(
+             decoration: InputDecoration(
                   hintText: 'Search products',
                   prefixIcon: Icon(Icons.search),
                   border: OutlineInputBorder(
