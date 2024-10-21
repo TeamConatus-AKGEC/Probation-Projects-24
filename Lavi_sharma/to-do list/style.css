@@ -70,7 +70,8 @@ h2{
     width: 100%;
     border: 0.06rem solid #d2d2d2bf;
     border-radius: 0.5rem;
-    padding: 1.25rem
+    padding: 1.25rem;
+    font-size: 1rem;
 }
 
 input [type="text"]::placeholder {
@@ -95,14 +96,28 @@ li{
     padding: 1.3rem;
 }
 
-#todoList p{
+#todoList p {
+    display: flex;
+    gap: 1rem;
+    color: var(--dark);
+    align-items: center;
+  }
+
+  #todoList .disabled {
     color: #8f98a8;
-}
+  }
 
 .disabled {
     display: flex;
     text-decoration: line-through;
 }
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+  }
 
 input[type="checkbox"]::before {
     content: "\2713";
@@ -114,14 +129,14 @@ input[type="checkbox"]::before {
     border: 0.06rem solid var(--grey-border);
     border-radius: 50%;
     color: transparent;
-}
+  }
 
-input[type="checkbox"]::before::after {
+input[type="checkbox"]:checked::before {
     color: var(--white);
     background-color: var(--green);
     border: 0.06rem solid var(--green);
     border-radius: 50%;
-}
+  }
 
 .counter {
     border: 0.06rem solid var(--grey-light);
@@ -141,6 +156,8 @@ input[type="checkbox"]::before::after {
 .counter-container button {
     border: none;
     background-color: transparent;
+    color: var(--grey);
+    font-size: 1rem;
 }
 
 .footer {
