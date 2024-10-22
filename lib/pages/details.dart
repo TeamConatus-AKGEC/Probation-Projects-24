@@ -42,15 +42,15 @@ class _DetailsState extends State<Details> {
                   children: [
                   Text(
                     "Apple iPhone 13",
-                    style: AppWidges.semiBoldTextFeildStyle(),
+                    style: AppWidgets.semiBoldTextFeildStyle(),
                   ),
                   Text(
                     "Super Retina XDR display",
-                    style: AppWidges.boldTextFeildStyle(),
+                    style: AppWidgets.boldTextFeildStyle(),
                   ),
                  ],
               ),
-              const Spacer(),
+              //const Spacer(),
               ]
             ),
               const SizedBox(
@@ -58,7 +58,7 @@ class _DetailsState extends State<Details> {
               ),
               Text(
                 "If you turn on Low Power Mode, 5G will be disabled except in some cases, such as video streaming and large downloads on iPhone 12 and iPhone 13 models.",
-                style: AppWidges.LightTextFeildStyle(),
+                style: AppWidgets.lightTextFeildStyle(),
               ),
               const SizedBox(
                 height: 20.0,
@@ -67,7 +67,7 @@ class _DetailsState extends State<Details> {
                 children: [
                   Text(
                     "Delivery Time",
-                    style: AppWidges.semiBoldTextFeildStyle(),
+                    style: AppWidgets.semiBoldTextFeildStyle(),
                   ),
                   const SizedBox(
                     width: 25.0,
@@ -81,7 +81,7 @@ class _DetailsState extends State<Details> {
                   ),
                   Text(
                     "2 Days",
-                    style: AppWidges.semiBoldTextFeildStyle(),
+                    style: AppWidgets.semiBoldTextFeildStyle(),
                   ),
                 ],
               ),
@@ -96,11 +96,11 @@ class _DetailsState extends State<Details> {
                       children: [
                         Text(
                           "Total Price",
-                          style: AppWidges.semiBoldTextFeildStyle(),
+                          style: AppWidgets.semiBoldTextFeildStyle(),
                         ),
                         Text(
                           "\u20B942,999",
-                          style: AppWidges.boldTextFeildStyle(),
+                          style: AppWidgets.boldTextFeildStyle(),
                         )
                       ],
                     ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 
-class AppWidges {
+class AppWidgets {
   static TextStyle boldTextFeildStyle() {
     return const TextStyle(
         color: Colors.black,
@@ -9,7 +9,7 @@ class AppWidges {
         fontWeight: FontWeight.bold,
         fontFamily: 'Poppins');
   }
-  static TextStyle LightTextFeildStyle() {
+  static TextStyle lightTextFeildStyle() {
     return const TextStyle(
         color: Colors.black38,
         fontSize: 15.0,

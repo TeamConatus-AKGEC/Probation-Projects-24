@@ -1,6 +1,6 @@
 import 'package:app_design/pages/details.dart';
-import 'package:app_design/pages/profile.dart';
-import 'package:app_design/pages/show_menu.dart';
+import 'package:app_design/pages/account.dart';
+import 'package:app_design/pages/account.dart';
 import 'package:app_design/pages/show_menu.dart';
 import 'package:app_design/widges/widges_support.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +20,7 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         titleSpacing: 0.0,
         title: const Text('Hello Sneha,',
-        style: TextStyle(fontFamily: 'Playwrite',fontWeight: FontWeight.bold) ),
+        style: TextStyle(fontFamily: 'Poppins',fontWeight: FontWeight.bold) ),
         backgroundColor: Colors.red[900],
         actions: [
           IconButton(
@@ -28,7 +28,7 @@ class _HomeState extends State<Home> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => const Profile()),
+                      builder: (context) => const Account()),
                 );
               },
               icon: const Icon(Icons.account_circle),
@@ -77,12 +77,12 @@ class _HomeState extends State<Home> {
                 margin: const EdgeInsets.all(10.0),
                 child: showCategories(),
               ),
-              Text("Top Deals", style: AppWidges.boldTextFeildStyle()),
+              Text("Top Deals", style: AppWidgets.boldTextFeildStyle()),
               Container(
                 margin: const EdgeInsets.all(10.0),
                 child: showItems(),
               ),
-              Text("Trending Deals Under \u20B9499", style: AppWidges.boldTextFeildStyle()),
+              Text("Trending Deals Under \u20B9499", style: AppWidgets.boldTextFeildStyle()),
               Container(
                 margin: const EdgeInsets.all(10.0),
                 child: showItems1(),
@@ -207,14 +207,14 @@ class _HomeState extends State<Home> {
                         ),
                         Text(
                           price,
-                          style: AppWidges.semiBoldTextFeildStyle(),
+                          style: AppWidgets.semiBoldTextFeildStyle(),
                         ),
                         const SizedBox(
                           height: 10.0,
                         ),
                         Text(
                           label,
-                          style: AppWidges.LightTextFeildStyle(),
+                          style: AppWidgets.lightTextFeildStyle(),
                         ),
                         const SizedBox(
                           height: 5.0,
@@ -280,14 +280,14 @@ class _HomeState extends State<Home> {
                           ),
                           Text(
                             price,
-                            style: AppWidges.semiBoldTextFeildStyle(),
+                            style: AppWidgets.semiBoldTextFeildStyle(),
                           ),
                           const SizedBox(
                             height: 10.0,
                           ),
                           Text(
                             label,
-                            style: AppWidges.LightTextFeildStyle(),
+                            style: AppWidgets.lightTextFeildStyle(),
                           ),
                           const SizedBox(
                             height: 5.0,

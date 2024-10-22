@@ -34,14 +34,9 @@ class _ShowMenuState extends State<ShowMenu> {
   }
 }
 
-class DrawerList extends StatefulWidget {
+class DrawerList extends StatelessWidget {
   const DrawerList({super.key});
 
-  @override
-  State<DrawerList> createState() => _DrawerListState();
-}
-
-class _DrawerListState extends State<DrawerList> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -75,13 +70,13 @@ Widget menuItem(int id , String title , IconData icon){
               color: Colors.black,
             ),
             ),
-            SizedBox(width: 10),
+            const SizedBox(width: 10),
             Expanded(
               flex: 3,
               child:
               Text(title ,
                 style:
-                TextStyle(
+                const TextStyle(
                     color: Colors.black ,
                     fontSize: 16.0),
               ),

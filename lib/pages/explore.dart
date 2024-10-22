@@ -1,18 +1,12 @@
 import 'package:flutter/material.dart';
 
-class Explore extends StatefulWidget {
+class Explore extends StatelessWidget {
   const Explore({super.key});
 
   @override
-  State<Explore> createState() => _ExploreState();
-}
-
-class _ExploreState extends State<Explore> {
-  @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Scaffold(
+      body: Center(child: Text("Explore page.."),),
+    );
   }
 }
-
-
-

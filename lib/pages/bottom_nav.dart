@@ -1,7 +1,7 @@
 import 'package:app_design/pages/cart.dart';
 import 'package:app_design/pages/explore.dart';
 import 'package:app_design/pages/home.dart';
-import 'package:app_design/pages/profile.dart';
+import 'package:app_design/pages/account.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -19,16 +19,16 @@ class _BottomNavState extends State<BottomNav> {
   late Widget currentPage;
   late Home homepage;
   late Cart cart;
-  late Profile profile;
+  late Account account;
   late Explore explore;
 
   @override
   void initState() {
     homepage = const Home();
     cart = const Cart();
-    profile = const Profile();
     explore = const Explore();
-    pages = [homepage, explore, cart, profile];
+    account = const Account();
+    pages = [homepage, cart, explore, account];
     super.initState();
   }
 
