@@ -1,22 +1,9 @@
-import 'package:ecommerce_app/Components/navbar.dart';
+//import 'package:ecommerce_app/Components/navbar.dart';
 import 'package:ecommerce_app/Screens/Settings.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ecommerce_app/Screens/Notification.dart';
 import 'package:ecommerce_app/Screens/help_center.dart';
-class profile extends StatelessWidget {
-  const profile({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: "Profile",
-      debugShowCheckedModeBanner: false,
-      home: ProfilePage(),
-    );
-  }
-}
-
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
 
@@ -32,7 +19,7 @@ class ProfilePage extends StatelessWidget {
                 backgroundColor: Colors.white,
         ),
         backgroundColor: Colors.white,
-        bottomNavigationBar: Navbar(),
+       // bottomNavigationBar: Navbar(),
         body: ListView(
           children: [
             SizedBox(

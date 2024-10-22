@@ -1,22 +1,9 @@
-import 'package:ecommerce_app/Components/navbar.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce_app/Components/product.dart';
 import 'package:ecommerce_app/Components/product_card.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ecommerce_app/Components/searchbar.dart';
-
-class fashion extends StatelessWidget {
-  const fashion({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: "FashionPage",
-      debugShowCheckedModeBanner: false,
-      home: FashionPage(),
-    );
-  }
-}
+//import 'package:ecommerce_app/Components/navbar.dart';
 
 class FashionPage extends StatelessWidget {
   const FashionPage({super.key});
@@ -26,7 +13,7 @@ class FashionPage extends StatelessWidget {
     return Scaffold(
       appBar: Searchbar(),
       backgroundColor: Colors.white,
-      bottomNavigationBar: Navbar(),
+      //bottomNavigationBar: Navbar(),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

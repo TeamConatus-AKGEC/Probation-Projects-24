@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ecommerce_app/Components/navbar.dart';
 class Notify extends StatelessWidget {
   const Notify({super.key});
 
@@ -16,7 +15,6 @@ class Notify extends StatelessWidget {
         ),
       ),
         backgroundColor: Colors.white,
-        bottomNavigationBar: Navbar(),
         body: ListView(
           children: [
             Padding(

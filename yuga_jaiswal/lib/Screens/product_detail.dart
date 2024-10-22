@@ -1,7 +1,7 @@
 import 'package:ecommerce_app/Screens/buy.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce_app/Components/product.dart';
-import 'package:ecommerce_app/Components/navbar.dart';
+//import 'package:ecommerce_app/Components/navbar.dart';
 class ProductDetail extends StatelessWidget {
   final Product product;
   final List<Product> allProducts;
@@ -11,10 +11,45 @@ class ProductDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
-      ),
+          title: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: Text(product.name,
+              style: TextStyle(color: Colors.black, fontSize: 18),
+            ),
+          ),
+          centerTitle: true,
+          backgroundColor: Colors.white,
+          leading: Padding(
+            padding: const EdgeInsets.only(left: 16.0),
+            child: Container(
+              decoration: BoxDecoration(
+                shape: BoxShape.circle),
+              child: IconButton(
+                icon: Icon(Icons.arrow_back, color: Colors.black),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              ),
+            ),
+          ),
+          actions: [
+            Padding(
+              padding: const EdgeInsets.only(right: 16.0),
+              child: Container(
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                ),
+                child: IconButton(
+                  icon: Icon(Icons.share, color: Colors.black, size: 20,),
+                  onPressed: () {},
+                ),
+              ),
+            ),
+          ],
+          elevation: 0, 
+        ),
       backgroundColor: Colors.white,
-      bottomNavigationBar: Navbar(),
+      //bottomNavigationBar: Navbar(),
       body: SingleChildScrollView(
          child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

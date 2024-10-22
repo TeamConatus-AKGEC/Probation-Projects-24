@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ecommerce_app/main.dart';
+import 'package:ecommerce_app/Screens/homescreen.dart';
 import 'dart:async';
+import 'package:ecommerce_app/Components/navbar.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -13,7 +14,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     Timer(Duration(seconds: 3), () {
         Navigator.push(context,
-        MaterialPageRoute(builder: (BuildContext context) => HomeScreen()));
+        MaterialPageRoute(builder: (BuildContext context) => Navbar()));
     });
   }
 

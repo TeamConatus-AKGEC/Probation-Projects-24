@@ -1,19 +1,5 @@
-import 'package:ecommerce_app/Components/navbar.dart';
+//import 'package:ecommerce_app/Components/navbar.dart';
 import 'package:flutter/material.dart';
-
-class cart extends StatelessWidget {
-  const cart({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-
-      title: "Cart",
-      debugShowCheckedModeBanner: false,
-      home: CartPage(),
-    );
-  }
-}
 
 class CartPage extends StatelessWidget {
   const CartPage({super.key});
@@ -31,7 +17,7 @@ class CartPage extends StatelessWidget {
         ),
       ),
       backgroundColor: Colors.white,
-      bottomNavigationBar: Navbar(),
+      //bottomNavigationBar: Navbar(),
     );
   }
 }

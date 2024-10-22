@@ -1,7 +1,8 @@
+import 'package:ecommerce_app/Screens/Notification.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce_app/Screens/cart.dart';
 import 'package:ecommerce_app/Screens/profile.dart';
-import 'package:ecommerce_app/main.dart';
+import 'package:ecommerce_app/Screens/homescreen.dart';
 
 class Navbar extends StatefulWidget {
   const Navbar({super.key});
@@ -11,52 +12,48 @@ class Navbar extends StatefulWidget {
 }
 
 class _NavbarState extends State<Navbar> {
-  int selectedIndex = 0;
+  int _selectedIndex = 0;
+
+  final List<Widget> _pages = [
+    HomeScreen(),
+    CartPage(),
+    Notify(),
+    ProfilePage(),
+  ];
   @override
   Widget build(BuildContext context) {
-    return BottomNavigationBar(
+      return Scaffold(
+        body: _pages[_selectedIndex],
+        bottomNavigationBar: BottomNavigationBar(
+          currentIndex: _selectedIndex,
+          onTap: (index) {
+            setState(() {
+              _selectedIndex = index;
+            });
+          },
+          type: BottomNavigationBarType.fixed,
           backgroundColor: Colors.white,
           selectedItemColor: Colors.orangeAccent,
-          unselectedItemColor: Colors.orangeAccent,
-          selectedFontSize: 14,
-          unselectedFontSize: 14,
-          //currentIndex: selectedIndex,
-          items: [
-        BottomNavigationBarItem(
-          icon: Icon(
-            Icons.home),
-          label: 'Home',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.shopping_cart_outlined),
-          label: 'Cart',
-        ),
-        BottomNavigationBarItem(
-           icon: Icon(Icons.perm_identity_outlined),
-           label: 'Profile',
-        ),
-      ],
-        onTap: (index) {
-        //    setState(() {
-        //   selectedIndex = index;  
-        // });
-          switch (index) {
-            case 0:
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => HomeScreen()));
-              break;
-            case 1:
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => cart()));
-              break;
-            case 2:
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => profile()));
-              break;
-            default:
-              break;
-          }
-        }
-        );
+          unselectedItemColor: Colors.grey,
+          items: const [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.shopping_cart),
+              label: 'Cart',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.notifications),
+              label: 'Notifications',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              label: 'Profile',
+            ),
+          ],
+      ),
+  );
   }
-}
+  }

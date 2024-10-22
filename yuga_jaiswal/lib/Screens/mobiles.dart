@@ -5,19 +5,6 @@ import 'package:ecommerce_app/Components/product_card.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ecommerce_app/Components/searchbar.dart';
 
-class Mobiles extends StatelessWidget {
-  const Mobiles({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: "MobilePage",
-      debugShowCheckedModeBanner: false,
-      home: MobilePage(),
-    );
-  }
-}
-
 class MobilePage extends StatelessWidget {
   const MobilePage({super.key});
 
@@ -26,7 +13,7 @@ class MobilePage extends StatelessWidget {
     return Scaffold(
       appBar: Searchbar(),
       backgroundColor: Colors.white,
-      bottomNavigationBar: Navbar(),
+      //bottomNavigationBar: Navbar(),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

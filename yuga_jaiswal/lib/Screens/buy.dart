@@ -34,7 +34,7 @@ class _BuyState extends State<Buy> {
         ),
       ),
       backgroundColor: Colors.white,
-      bottomNavigationBar: Navbar(),
+      //bottomNavigationBar: Navbar(),
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.all(16.0),

@@ -5,19 +5,6 @@ import 'package:ecommerce_app/Components/product_card.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ecommerce_app/Components/searchbar.dart';
 
-class Electronics extends StatelessWidget {
-  const Electronics({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: "ElectronicsPage",
-      debugShowCheckedModeBanner: false,
-      home: ElectronicsPage(),
-    );
-  }
-}
-
 class ElectronicsPage extends StatelessWidget {
   const ElectronicsPage({super.key});
 
@@ -26,7 +13,7 @@ class ElectronicsPage extends StatelessWidget {
     return Scaffold(
       appBar: Searchbar(),
       backgroundColor: Colors.white,
-      bottomNavigationBar: Navbar(),
+      //bottomNavigationBar: Navbar(),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
