@@ -134,7 +134,7 @@ ul li span :hover{
 }
 ul li:hover{
     color: #ff5945;
-    transform: scale(1.05); 
+    transform: scale(1.03); 
     transition: ease-in-out .42s;
 }
 
@@ -180,5 +180,8 @@ ul li:hover{
         opacity: 1;
     }
 }
+
+
+
 
 
