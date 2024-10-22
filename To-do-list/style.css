@@ -5,7 +5,8 @@
   }
   body {
     font-family: 'Arial', sans-serif;
-    background: #3498db;
+    background: linear-gradient(135deg, #46cbfb 0%, #333f3f 100%);
+
   }
     .container {
     width: 70%;
