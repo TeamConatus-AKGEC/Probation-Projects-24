@@ -1,4 +1,5 @@
 import 'package:app_design/pages/coins.dart';
+import 'package:app_design/pages/profile_list.dart';
 import 'package:flutter/material.dart';
 
 class Account extends StatefulWidget {
@@ -36,16 +37,11 @@ class _AccountState extends State<Account> {
                 padding: const EdgeInsets.all(10.0),
               ),
             ],
-            bottom: TabBar(
-                indicator: ShapeDecoration(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                ),
+            bottom: const TabBar(
                 labelColor: Colors.black,
                 unselectedLabelColor: Colors.black,
-                padding: const EdgeInsets.symmetric(horizontal: 8),
-                tabs: const [
+                padding: EdgeInsets.symmetric(horizontal: 8),
+                tabs: [
                   Tab(
                     text: 'Orders',
                   ),
@@ -53,7 +49,7 @@ class _AccountState extends State<Account> {
                     text: 'Wishlist',
                   ),
                   Tab(
-                    text: 'Help Center',
+                    text: 'Profile',
                   ),
                 ]),
           ),
@@ -69,10 +65,9 @@ class _AccountState extends State<Account> {
                   style: textStyle,
                 )),
             Center(
-                child: Text(
-                  "Help Center",
-                  style: textStyle,
-                )),
+                child:
+                  ProfileList(),
+            ),
           ]),
         ));
   }

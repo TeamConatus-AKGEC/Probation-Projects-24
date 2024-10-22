@@ -163,7 +163,7 @@ class _HomeState extends State<Home> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   _builtItems("images/iphone.jpeg", "\u20B942,999", "Apple iPhone 13", "Super Retina XDR display" ),
-                  _builtItems("images/samsung.jpeg", "\u20B975,999", "Samsung Galaxy S23", "3900mAh battery with support for 25W charging" ),
+                  _builtItems("images/samsung.jpeg", "\u20B975,999", "Samsung Galaxy S23", "3900mAh battery with 25W charging" ),
                   ]
             ),
             Row(
@@ -240,7 +240,7 @@ class _HomeState extends State<Home> {
           Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                _builtItems1("images/candles.jpg", "\u20B9349", "24Pcs Decorative", "flammable solid substance such as tallow" ),
+                _builtItems1("images/candles.jpg", "\u20B9349", "24Pcs Decorative", "flammable solid substance like tallow" ),
                 _builtItems1("images/accessories.jpeg", "\u20B9185", "Beautiful Accessories", "Intriguing, alluring, fascinating" ),
               ]
           ),
