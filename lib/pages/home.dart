@@ -1,6 +1,5 @@
 import 'package:app_design/pages/details.dart';
 import 'package:app_design/pages/account.dart';
-import 'package:app_design/pages/account.dart';
 import 'package:app_design/pages/show_menu.dart';
 import 'package:app_design/widges/widges_support.dart';
 import 'package:flutter/material.dart';
@@ -163,22 +162,22 @@ class _HomeState extends State<Home> {
             Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  _builtItems("images/iphone.jpeg", "\u20B942,999", "Apple iPhone 13" ),
-                  _builtItems("images/samsung.jpeg", "\u20B975,999", "Samsung Galaxy S23" ),
+                  _builtItems("images/iphone.jpeg", "\u20B942,999", "Apple iPhone 13", "Super Retina XDR display" ),
+                  _builtItems("images/samsung.jpeg", "\u20B975,999", "Samsung Galaxy S23", "3900mAh battery with support for 25W charging" ),
                   ]
             ),
             Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                _builtItems("images/iQOO.jpeg", "\u20B919,998", "iQOO Z9s 5G" ),
-                _builtItems("images/apple.webp", "\u20B959,990", "Apple MacBook Air" ),
+                _builtItems("images/iQOO.jpeg", "\u20B919,998", "iQOO Z9s 5G", "I Quest On and On"),
+                _builtItems("images/apple.webp", "\u20B959,990", "Apple MacBook Air", " Intel Y-series Amber Lake " ),
                 ]
              ),
           ],
       );
   }
 
-  Widget _builtItems(String imagePath , String price , String label){
+  Widget _builtItems(String imagePath , String price , String label , String label1){
     return Material(
         child: Row(
             children: [
@@ -187,7 +186,12 @@ class _HomeState extends State<Home> {
                 Navigator.push(
                 context,
                 MaterialPageRoute(
-                builder: (context) => const Details()),
+                builder: (context) => Details(
+                  imagePath: imagePath,
+                  price: price,
+                  label: label,
+                  label1: label1,
+                )),
                 );
                 },
                 child: Container(
@@ -236,22 +240,22 @@ class _HomeState extends State<Home> {
           Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                _builtItems1("images/candles.jpg", "\u20B9349", "24Pcs Decorative" ),
-                _builtItems1("images/accessories.jpeg", "\u20B9185", "Beautiful Accessories" ),
+                _builtItems1("images/candles.jpg", "\u20B9349", "24Pcs Decorative", "flammable solid substance such as tallow" ),
+                _builtItems1("images/accessories.jpeg", "\u20B9185", "Beautiful Accessories", "Intriguing, alluring, fascinating" ),
               ]
           ),
           Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                _builtItems1("images/blanket.jpeg", "\u20B9499", "AC Conforter Blanket" ),
-                _builtItems1("images/lights.jpg", "\u20B9251", "LED String Serial Lights" ),
+                _builtItems1("images/blanket.jpeg", "\u20B9499", "AC Conforter Blanket", "Blankets chronicles Craig's adolescence" ),
+                _builtItems1("images/lights.jpg", "\u20B9251", "LED String Serial Lights", "conformance to specifications." ),
               ]
           ),
         ],
       );
   }
 
-  Widget _builtItems1(String imagePath , String price , String label){
+  Widget _builtItems1(String imagePath , String price , String label , String label1){
     return Material(
       child: Row(
           children: [
@@ -260,7 +264,12 @@ class _HomeState extends State<Home> {
                 Navigator.push(
                 context,
                 MaterialPageRoute(
-                builder: (context) => const Details()),
+                builder: (context) => Details(
+                  imagePath: imagePath,
+                  price: price,
+                  label: label,
+                  label1: label1,
+                )),
                 );
               },
               child: Container(

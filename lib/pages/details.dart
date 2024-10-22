@@ -2,7 +2,18 @@ import 'package:app_design/widges/widges_support.dart';
 import 'package:flutter/material.dart';
 
 class Details extends StatefulWidget {
-  const Details({super.key});
+  final String imagePath;
+  final String price;
+  final String label;
+  final String label1;
+
+  const Details({
+    super.key,
+    required this.imagePath,
+    required this.price,
+    required this.label,
+    required this.label1,
+  });
 
   @override
   State<Details> createState() => _DetailsState();
@@ -27,7 +38,7 @@ class _DetailsState extends State<Details> {
               ),
             ),
             Image.asset(
-              "images/iphone.jpeg",
+              widget.imagePath,
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height / 2,
               fit: BoxFit.fill,
@@ -41,11 +52,11 @@ class _DetailsState extends State<Details> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                   Text(
-                    "Apple iPhone 13",
+                    widget.label,
                     style: AppWidgets.semiBoldTextFeildStyle(),
                   ),
                   Text(
-                    "Super Retina XDR display",
+                    widget.label1,
                     style: AppWidgets.boldTextFeildStyle(),
                   ),
                  ],
@@ -99,7 +110,7 @@ class _DetailsState extends State<Details> {
                           style: AppWidgets.semiBoldTextFeildStyle(),
                         ),
                         Text(
-                          "\u20B942,999",
+                          widget.price,
                           style: AppWidgets.boldTextFeildStyle(),
                         )
                       ],
