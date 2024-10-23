@@ -1,3 +1,8 @@
+document.getElementById('new-task').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        addTask();
+    }
+});
 function addTask() {
     const taskInput = document.getElementById('new-task');
     const taskText = taskInput.value;
