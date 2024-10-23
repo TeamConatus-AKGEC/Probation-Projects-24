@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+# app_design
+
+A new Flutter project.
+
+## Getting Started
+
+This project is a starting point for a Flutter application.
+
+A few resources to get you started if this is your first Flutter project:
+
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
+=======
 # Probation Projects'24
 
 Jai hind and welcome to Team Conatus Probation Projects for 2024!👋✨
@@ -37,3 +55,4 @@ Jai hind and welcome to Team Conatus Probation Projects for 2024!👋✨
 The reviewers will be notified of the pull request and after reviewing will merge the pull request into the main branch.
 
 Best of luck for all the tasks ahead!👍✌️
+>>>>>>> 847496094d807fa4cc1e9aa3303f4f1e3d16026c
