@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:todo_app/Components/navbar.dart';
 import 'package:todo_app/Screens/home_screen.dart';
 import 'package:todo_app/firebase_options.dart';
 
@@ -16,7 +17,7 @@ class TodoApp extends StatelessWidget {
       title: "ToDo App",
       debugShowCheckedModeBanner: false,
       routes: {
-        '/': (context) => HomeScreen(),
+        '/': (context) => Navbar(),
         '/home': (context) => HomeScreen(),
       },
     );
