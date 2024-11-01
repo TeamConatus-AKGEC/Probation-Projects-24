@@ -34,6 +34,7 @@ function addTask() {
         saveToLocalStorage();
         todoInput.value = "";
         displayTasks();
+        console.log("hi");
     }
 }
 
