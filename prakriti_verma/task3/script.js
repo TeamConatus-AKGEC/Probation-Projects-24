@@ -8,7 +8,9 @@ const cellGap = 3;
 const resources = 200; //initial value of the resources available to the player
 const plant = []; //for collection of plants
 const zombie = [];
+const interval = 400;
 let frame = 0;
+let gameOver = false;
 
 //to keep track of movement of mouse over the grid
 const mouse = {
@@ -91,23 +93,34 @@ function handleZombies(){
         {
             zombie[i].update;
             zombie[i].draw;
+            if(zombie[i].x < 0) gameOver = true
         }
-        if(frame % 100 === 0)
+        if(frame % interval === 0) //new zombie will be added after every 
         {
-            let verticalPos = Math.floor(Math.random() * 5 + 1) * cellSize; //for random selection of row for zombie movement
+            let verticalPos = Math.floor(Math.random() * 5 + 1) * cellSize; 
+            //for random selection of row for zombie movement
             zombie.push(new zombies(verticalPos));
         }
+        if(interval > 120) interval -= 100;
 }
 
 function gameStatus(){
     fillStyle = 'gold';
     ctx.font = '30px Arial';
     ctx.fillText(`Power: ${resources}`, 20 , 55);
+    if(gameOver)
+    {
+        ctx.fillStyle = 'black';
+        ctx.font = '50px Arial';
+        ctx.fillText('GAME OVER', 150, 330);
+    }
+
 }
 
 function animate(){
     handlePlants();
     gameStatus();
     frame++;
+    if(!gameOver) requestAnimationFrame(animate);
 }
 animate();
