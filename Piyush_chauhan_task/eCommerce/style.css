@@ -248,7 +248,7 @@
   background-color: #d0da49;
  }
  .card{
-  width: 24vw;
+  width: 26vw;
   height: auto;
   background-color: #f9f4f4;
   margin-bottom: 10vh;
@@ -256,12 +256,13 @@
   font-size: 1.7em;
   text-align: center;
   box-sizing: content-box;
+  flex-wrap: wrap;
  }
- @media screen {
+ /* @media screen {
   .cards{
-    flex-wrap: wrap;
-  }
- }
+   
+  } */
+ /* } */
  @media screen and (max-width:1700px) {
     .card{
       width: auto;

@@ -17,13 +17,13 @@ function addTask() {
     const li = document.createElement('li');
     li.textContent = taskText;
   
-    const checkIcon = document.createElement('i');
+    const checkIcon = document.createElement('i1');
     checkIcon.classList.add('fas', 'fa-check');
     checkIcon.onclick = function() {
         li.classList.toggle('completed');
     };
   
-    const trashIcon = document.createElement('i');
+    const trashIcon = document.createElement('i2');
     trashIcon.classList.add('fas', 'fa-trash');
     trashIcon.onclick = function() {
         taskList.removeChild(li);

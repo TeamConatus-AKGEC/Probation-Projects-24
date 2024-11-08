@@ -1,9 +1,10 @@
 *{
     padding: 0;
     margin: 0;
-    overflow-x: hidden;
+    
   }
   body {
+   height: 94vh;
     font-family: 'Arial', sans-serif;
     background: linear-gradient(135deg, #46cbfb 0%, #333f3f 100%);
 
