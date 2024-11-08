@@ -39,6 +39,13 @@ canvas.addEventListener('click', function(){
     
     //To prevent setting a plant in the resource area
     if(positionY < cellSize)return;
+    //to prevent stacking of plants on the same cell
+    for(let i = 0 ; i < plant.length ; i++)
+    {
+        if(plant[i].x === positionX && plant[i].y === positionY)
+            return;
+    }
+    
     let plantCost = 60;
 
     //creation of an empty plant object based on resources available
