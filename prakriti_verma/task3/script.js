@@ -26,10 +26,11 @@ class plants{
         this.timer = 0;
     }
     draw(){
-        ctx.fillStyle = 'light green';
+        ctx.fillStyle = 'light green'; //color of plant
         ctx.fillRect(this.x, this.y, this.width, this.height);
         ctx.font = '20px Arial';
-        ctx.fillText(Math.floor(this.health), this.x, this.y);
+        ctx.fillText(Math.floor(this.health), this.x , this.y);
+        ctx.fillStyle = 'gold'; //color of text inside
     }
 }
 canvas.addEventListener('click', function(){
@@ -41,8 +42,26 @@ canvas.addEventListener('click', function(){
     let plantCost = 60;
 
     //creation of an empty plant object based on resources available
-    if(resources > plantCost){
+    if(resources >= plantCost){
         plant.push(new plants(positionX, positionY));
         resources -= plantCost; 
     }
 })
+
+function handlePlants(){
+    for(let i = 0 ; i < plant.length ; i++){
+        plant[i].draw();
+    }
+}
+
+function gameStatus(){
+    fillStyle = 'gold';
+    ctx.font = '30px Arial';
+    ctx.fillText(`Power: ${resources}`, 20 , 55);
+}
+
+function animate(){
+    handlePlants();
+    gameStatus();
+}
+animate();
