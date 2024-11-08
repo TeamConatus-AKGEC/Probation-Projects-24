@@ -12,5 +12,9 @@ let addItem = (txt) => {
     let listItem = document.createElement("li");
     listItem.innerHTML = `${txt}<i></i>`;
 
+    listItem.addEventListener("click", function(){
+        this.classList.toggle('done');
+    })
+
     list.appendChild(listItem);
 }
