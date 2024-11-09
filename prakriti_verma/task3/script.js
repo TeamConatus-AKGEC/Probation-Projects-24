@@ -18,7 +18,7 @@ const mouse = {
     y: undefined,
 }
 
-class plants{
+class plants{ //template for creation of plants
     constructor(x, y){
         this.x = x;
         this.y = y;
@@ -37,7 +37,7 @@ class plants{
         ctx.fillStyle = 'gold'; //color of text inside
     }
 }
-canvas.addEventListener('click', function(){
+canvas.addEventListener('click', function(){ //event of setting plants in the game grid
     const positionX = mouse.x - (mouse.x % cellSize);
     const positionY = mouse.y - (mouse.y % cellSize);
     
@@ -59,53 +59,67 @@ canvas.addEventListener('click', function(){
     }
 })
 
-function handlePlants(){
+function handlePlants(){ 
     for(let i = 0 ; i < plant.length ; i++){
         plant[i].draw();
+        for(let j = 0 ; j < zombie.length ; j++){
+            if(collision(plant[j], zombie[j])){ //when plant and zombie are next to each other 
+                zombie[j].move = 0;
+                plant[i].health -= 0.2;
+            }
+            if(plant[i] && plant[i].health <= 0)
+            {
+                plant.splice(i, 1); //removal of the plant from array after being eaten by zombie
+                i--;
+                zombie[j].move = zombie[j].speed;
+            }
+        }     
     }
 }
 
-class zombies{
+class zombies{ //template for creation of zombies
     constructor(verticalPos){
         this.x = canvas.width;
         this.y = verticalPos;
         this.width = cellSize;
         this.height = cellSize;
-        this.speed = Math.random()* 0.2 + 0.4;
+        this.speed = Math.random()* 0.2 + 0.4; //a random speed between 0.4 and 0.6
         this.move = this.speed;
         this.health = 90; //current health of a zombie
         this.maxHealth = 90; //to keep track of initial health of every zombie
     }
-    update(){
-        this.x -= this.movement;
+    update(){ //to update the moving state of the zombie
+        this.x -= this.move; //modification in the position of zombie
     }
-    draw(){
+    draw(){ //to render the zombie on the canvas
         ctx.fillStyle = 'brown';
         ctx.fillRect(this.x, this.y, this.width, this.height);
         ctx.font = '30px Arial';
         ctx.fillText(Math.floor(this.health), 20, 55);
-        ctx.fillStyle = 'greenyellow';
+        ctx.fillStyle = 'green yellow';
     }
 }
 
 function handleZombies(){
     for(let i = 0 ; i < zombie.length ; i++)
+    {
         {
             zombie[i].update;
             zombie[i].draw;
             if(zombie[i].x < 0) gameOver = true
         }
-        if(frame % interval === 0) //new zombie will be added after every 
+        if(frame % interval === 0) //new zombie will be added after every interval
         {
             let verticalPos = Math.floor(Math.random() * 5 + 1) * cellSize; 
             //for random selection of row for zombie movement
             zombie.push(new zombies(verticalPos));
         }
         if(interval > 120) interval -= 100;
+    }
 }
 
 function gameStatus(){
-    fillStyle = 'gold';
+    fillStyle = 'green yellow';
     ctx.font = '30px Arial';
     ctx.fillText(`Power: ${resources}`, 20 , 55);
     if(gameOver)
@@ -114,7 +128,6 @@ function gameStatus(){
         ctx.font = '50px Arial';
         ctx.fillText('GAME OVER', 150, 330);
     }
-
 }
 
 function animate(){
