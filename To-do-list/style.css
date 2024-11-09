@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+  }
+  body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #46cbfb 0%, #333f3f 100%);
+
+  }
+    .container {
+    width: 70%;
+    height: auto;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+    h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1vh;
+    font-size: 2.5em;
+  }
+    input[type="text"] {
+    width: 70%;
+    height: 3vh;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-inline-start: 4.5vw;
+    font-size: 1.5em;
+    
+  }
+    button {
+      font-size: 1.5em;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 6px;
+    padding-bottom: 7px;
+    border-radius: 5px;
+    cursor: pointer;
+      align-items: center;
+      width: 10vw;
+      height: 5vh;
+  }
+    button:hover {
+    background-color: #2980b9;
+  }
+    ul {
+    list-style-type:none;
+    padding: 0;
+    margin-top: 20px;
+  }
+    li {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 2em;
+     overflow-wrap: anywhere;
+  }
+  
+  li:hover {
+    background-color: #f0f0f5;
+    transform: scale(1.01);
+  }
+  .completed {
+    text-decoration: line-through;
+    color: #95a5a6;
+    opacity: 0.6;
+  }
+  i {
+    cursor: pointer;
+    color: #e74c3c;
+  }
+  i:hover {
+    color: #c0392b;
+  }
+  @media (max-width: 768px) {
+    .container {
+      width: 90%;
+      padding: 10px;
+      flex-wrap: wrap;
+    }
+    input[type="text"] {
+      width: 70%;
+      margin-bottom: 10px;
+      column-gap: 1vw;
+    }
+    .addbutton{
+      width: auto;
+      height: auto;
+    
+    }
+    li{
+      font-size: 1em;
+    }
+  }
+  @media (max-width: 319px) {
+    .addbutton{
+     margin-inline-start: 4.4vw;
+  }
+  }
